@@ -30,3 +30,6 @@ cd build/tests
 
 ## Log of test
 Log locates at build/Testing/Temporary/LastTest.log
+
+# Create question
+./create_question.sh "Remove Duplicates from Sorted Array"
