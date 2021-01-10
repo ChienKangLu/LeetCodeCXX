@@ -2,10 +2,14 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/Question.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/validparentheses/ValidParentheses.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/validparentheses/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/mergetwosortedlists/MergeTwoSortedLists.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/mergetwosortedlists/ListNode.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/mergetwosortedlists/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
   "validparentheses/Solution.cpp"
+  "mergetwosortedlists/Solution.cpp"
 )
 
 add_library(SolutionLib
