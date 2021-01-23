@@ -16,15 +16,15 @@ Notice: Always build before testing
 ## Run all test suites
 ./test.sh
 
-## Run one test suite
+## Run single test suite
 cd /build
 make test test-mergetwosortedlists
 
-## List test cases in one test suite
+## List test cases in single test suite
 cd build/tests
 ./test-mergetwosortedlists --gtest_list_tests
 
-## Run one test case in test suite
+## Run single test case in test suite (Prefered)
 cd build/tests
 ./test-mergetwosortedlists --gtest_filter=MergeTwoSortedListsTest.test1
 

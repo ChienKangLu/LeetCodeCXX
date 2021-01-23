@@ -15,3 +15,4 @@ endfunction()
 
 add_unittest(test-validparentheses)
 add_unittest(test-mergetwosortedlists)
+add_unittest(test-removeduplicatesfromsortedarray)
