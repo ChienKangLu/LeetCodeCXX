@@ -7,7 +7,7 @@
 class MergeTwoSortedLists : public Question
 {
 public:
-  virtual ListNode* mergeTwoLists(ListNode *l1, ListNode *l2) = 0;
+  virtual ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) = 0;
 };
 
 #endif

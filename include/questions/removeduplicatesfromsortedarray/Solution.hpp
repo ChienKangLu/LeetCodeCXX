@@ -3,10 +3,10 @@
 
 #include "RemoveDuplicatesFromSortedArray.hpp"
 
-class Solution : RemoveDuplicatesFromSortedArray
+class Solution1 : RemoveDuplicatesFromSortedArray
 {
 public:
-  int removeDuplicates(std::vector<int> &nums);
+  int removeDuplicates(std::vector<int> &nums) override;
 };
 
 #endif

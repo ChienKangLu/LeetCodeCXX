@@ -10,9 +10,9 @@ set(INTERFACE_FILES
 )
 
 set(IMPLEMENTATION_SOURCES
-  "validparentheses/Solution.cpp"
-  "mergetwosortedlists/Solution.cpp"
-  "removeduplicatesfromsortedarray/Solution.cpp"
+  "validparentheses/Solution1.cpp"
+  "mergetwosortedlists/Solution1.cpp"
+  "removeduplicatesfromsortedarray/Solution1.cpp"
 )
 
 add_library(SolutionLib

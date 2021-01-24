@@ -1,18 +1,23 @@
 add_subdirectory("${PROJECT_SOURCE_DIR}/extern/googletest" "extern/googletest")
 
-function(add_unittest 
-  TESTNAME
-)
+function(add_unittest TEST_NAME)
+  # Get test dir
+  string(REPLACE "Test" "" PRE_TEST_DIR ${TEST_NAME})
+  string(TOLOWER ${PRE_TEST_DIR} TEST_DIR)
+
   # Tests need to be added as executables first
-  add_executable(${TESTNAME} ${TESTNAME}.cpp)
+  add_executable(${TEST_NAME} 
+    ${TEST_DIR}/${TEST_NAME}.cpp 
+    ${TEST_DIR}/${TEST_NAME}Base.hpp
+  )
 
   # Should be linked to the main library, as well as the google test library
-  target_link_libraries(${TESTNAME} PRIVATE SolutionLib gtest gmock gtest_main)
+  target_link_libraries(${TEST_NAME} PRIVATE SolutionLib gtest gmock gtest_main)
 
   # Automatically add tests with CTest 
-  gtest_discover_tests(${TESTNAME})
+  gtest_discover_tests(${TEST_NAME})
 endfunction()
 
-add_unittest(test-validparentheses)
-add_unittest(test-mergetwosortedlists)
-add_unittest(test-removeduplicatesfromsortedarray)
+add_unittest(MergeTwoSortedListsTest)
+add_unittest(RemoveDuplicatesFromSortedArrayTest)
+add_unittest(ValidParenthesesTest)

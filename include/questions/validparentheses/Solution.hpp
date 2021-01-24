@@ -4,10 +4,10 @@
 #include "ValidParentheses.hpp"
 #include <string>
 
-class Solution : public ValidParentheses 
+class Solution1 : public ValidParentheses 
 {
 public:
-  bool isValid(std::string s);
+  bool isValid(std::string s) override;
 };
 
 #endif

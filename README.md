@@ -18,15 +18,19 @@ Notice: Always build before testing
 
 ## Run single test suite
 cd /build
-make test test-mergetwosortedlists
+make test MergeTwoSortedListsTest
 
 ## List test cases in single test suite
 cd build/tests
-./test-mergetwosortedlists --gtest_list_tests
+./MergeTwoSortedListsTest --gtest_list_tests
 
 ## Run single test case in test suite (Prefered)
 cd build/tests
-./test-mergetwosortedlists --gtest_filter=MergeTwoSortedListsTest.test1
+./MergeTwoSortedListsTest --gtest_filter=MergeTwoSortedListsTest/MergeTwoSortedListsTestBase/Solution1.test11
+
+## Run a set of test case in test suite (Prefered)
+cd build/tests
+./MergeTwoSortedListsTest --gtest_filter=MergeTwoSortedListsTest/MergeTwoSortedListsTestBase/Solution1.test1*
 
 ## Log of test
 Log locates at build/Testing/Temporary/LastTest.log
