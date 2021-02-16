@@ -35,8 +35,9 @@ create() {
 
     local question_header_file_name="${no_sapce_question_name}.hpp"
     local solution_header_file_name="Solution.hpp"
-    local solution_source_file_name="Solution.cpp"
-    local test_source_file_name="test-${lower_case_no_space_question_name}.cpp"
+    local solution_source_file_name="Solution1.cpp"
+    local test_base_source_file_name="${no_sapce_question_name}TestBase.hpp"
+    local test_source_file_name="${no_sapce_question_name}Test.cpp"
 
     create_question_header_dir
     create_question_header_file
@@ -45,6 +46,8 @@ create() {
     create_solution_source_dir
     create_solution_source_file
 
+    create_test_source_dir
+    create_test_base_source_file
     create_test_source_file
 }
 
@@ -106,7 +109,7 @@ get_question_header_file_template() {
 class ${no_sapce_question_name} : public Question 
 {
 public:
-  /* Please define interface according to question */
+  /* Please declare pure virtual function according to question */
 };
 
 #endif\
@@ -135,10 +138,10 @@ get_solution_header_file_template() {
 
 #include \"${question_header_file_name}\"
 
-class Solution : ${no_sapce_question_name}
+class Solution1 : ${no_sapce_question_name}
 {
 public:
-  /* Please define interface according to ${no_sapce_question_name} */
+  /* Please redefine/override pure virtual function from ${no_sapce_question_name} */
 };
 
 #endif
@@ -187,9 +190,66 @@ get_solution_source_file_template() {
     echo "${template}"
 }
 
+create_test_source_dir() {
+    action "Create test source dir (Start)"
+    local test_source_dir="${tests_dir}/${lower_case_no_space_question_name}"
+    if [ -d "${test_source_dir}" ]
+    then
+        echo "Directory ${test_source_dir} exists." 
+    else
+        echo "Create directory ${test_source_dir}"
+        mkdir "${test_source_dir}"
+    fi
+    action "Create test source dir (End)"
+}
+
+create_test_base_source_file() {
+    action "Create test base source file (Start)"
+    local test_base_source_file="${tests_dir}/${lower_case_no_space_question_name}/${test_base_source_file_name}"
+    if [ -f "${test_base_source_file}" ]
+    then
+        echo "File ${test_base_source_file} exists." 
+    else
+        echo "Create File ${test_base_source_file}"
+        touch "${test_base_source_file}"
+        echo -n "$(get_test_base_source_file_template)" > "${test_base_source_file}"
+    fi
+    action "Create test base source file (End)"
+}
+
+get_test_base_source_file_template() {
+    local template="\
+#include \"gtest/gtest.h\"
+#include \"questions/${lower_case_no_space_question_name}/Solution.hpp\"
+
+template <typename T>
+class ${no_sapce_question_name}TestBase : public ::testing::Test 
+{
+protected:
+  void SetUp() override {}
+
+  void TearDown() override {}
+
+  T soluion = T();
+};
+
+TYPED_TEST_SUITE_P(${no_sapce_question_name}TestBase);
+
+TYPED_TEST_P(${no_sapce_question_name}TestBase, test1)
+{
+    // GIVEN
+    
+    // WHEN
+
+    // THEN
+}\
+"
+    echo "${template}"
+}
+
 create_test_source_file() {
 action "Create test source file (Start)"
-    local test_source_file="${tests_dir}/${test_source_file_name}"
+    local test_source_file="${tests_dir}/${lower_case_no_space_question_name}/${test_source_file_name}"
     if [ -f "${test_source_file}" ]
     then
         echo "File ${test_source_file} exists." 
@@ -203,23 +263,25 @@ action "Create test source file (Start)"
 
 get_test_source_file_template() {
     local template="\
-#include \"gtest/gtest.h\"
-#include \"questions/${lower_case_no_space_question_name}/Solution.hpp\"
+#include \"${test_base_source_file_name}\"
 
-class ${no_sapce_question_name}Test : public ::testing::Test 
-{
-protected:
-  void SetUp() override {}
+typedef testing::Types<Solution1> TestTypes;
 
-  void TearDown() override {}
-
-  Solution soluion;
+class TypeNames {
+public:
+  template <typename T>
+  static std::string GetName(int) {
+    if (std::is_same<T, Solution1>())
+    {
+      return \"Solution1\";
+    }
+  }
 };
 
-TEST_F(${no_sapce_question_name}Test, test1)
-{
-  /* Implement verification */
-}\
+REGISTER_TYPED_TEST_SUITE_P(${no_sapce_question_name}TestBase, 
+                            test1);
+
+INSTANTIATE_TYPED_TEST_SUITE_P(${no_sapce_question_name}Test, ${no_sapce_question_name}TestBase, TestTypes, TypeNames);\
 "
     echo "${template}"
 }
