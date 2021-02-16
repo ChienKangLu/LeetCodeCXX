@@ -2,7 +2,7 @@
 
 # Description:
 #   This script is a helpful tool to save effort about highly repetitive creation task.
-#   IIt can generate essential directorys, head files, source files from question name.
+#   It can generate essential directorys, head files, source files from question name.
 #
 # Example:
 #   ./create_question.sh "Remove Duplicates from Sorted Array"
@@ -23,8 +23,8 @@ create() {
     echo "Question name (upper case): ${lower_case_question_name}"
     local lower_case_no_space_question_name=${lower_case_question_name// /}
     echo "Question name (lower case and no space): ${lower_case_no_space_question_name}"
-    local upper_case_wiht_underline_question_name="${upper_case_question_name// /_}"
-    echo "Question name (upper case with underline): ${upper_case_wiht_underline_question_name}"
+    local upper_case_with_underline_question_name="${upper_case_question_name// /_}"
+    echo "Question name (upper case with underline): ${upper_case_with_underline_question_name}"
 
     local include_questions_dir="./include/questions"
     echo "include_questions_dir: ${include_questions_dir}"
@@ -101,8 +101,8 @@ create_question_header_file() {
 
 get_question_header_file_template() {
     local template="\
-#ifndef QUESTIONS_${upper_case_wiht_underline_question_name}_${upper_case_wiht_underline_question_name}_H_
-#define QUESTIONS_${upper_case_wiht_underline_question_name}_${upper_case_wiht_underline_question_name}_H_
+#ifndef QUESTIONS_${upper_case_with_underline_question_name}_${upper_case_with_underline_question_name}_H_
+#define QUESTIONS_${upper_case_with_underline_question_name}_${upper_case_with_underline_question_name}_H_
 
 #include \"../Question.hpp\"
 
@@ -133,8 +133,8 @@ create_solution_header_file() {
 
 get_solution_header_file_template() {
     local template="\
-#ifndef QUESTIONS_${upper_case_wiht_underline_question_name}_SOLUTION_H_
-#define QUESTIONS_${upper_case_wiht_underline_question_name}_SOLUTION_H_
+#ifndef QUESTIONS_${upper_case_with_underline_question_name}_SOLUTION_H_
+#define QUESTIONS_${upper_case_with_underline_question_name}_SOLUTION_H_
 
 #include \"${question_header_file_name}\"
 
@@ -178,8 +178,8 @@ create_solution_source_file() {
 
 get_solution_source_file_template() {
     local template="\
-#ifndef ${upper_case_wiht_underline_question_name}_SOLUTION_H_
-#define ${upper_case_wiht_underline_question_name}_SOLUTION_H_
+#ifndef ${upper_case_with_underline_question_name}_SOLUTION_H_
+#define ${upper_case_with_underline_question_name}_SOLUTION_H_
 
 #include \"questions/${lower_case_no_space_question_name}/Solution.hpp\"
 
