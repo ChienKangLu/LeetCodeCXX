@@ -7,6 +7,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/mergetwosortedlists/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/removeduplicatesfromsortedarray/RemoveDuplicatesFromSortedArray.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/removeduplicatesfromsortedarray/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/removeelement/RemoveElement.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/removeelement/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -14,6 +16,7 @@ set(IMPLEMENTATION_SOURCES
   "mergetwosortedlists/Solution1.cpp"
   "removeduplicatesfromsortedarray/Solution1.cpp"
   "removeduplicatesfromsortedarray/Solution2.cpp"
+  "removeelement/Solution1.cpp"
 )
 
 add_library(SolutionLib
