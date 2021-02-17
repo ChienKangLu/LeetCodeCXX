@@ -4,7 +4,7 @@
 
 void createNums(std::vector<int> &nums, std::initializer_list<int> li);
 
-void verifyVector(std::initializer_list<int> expected, std::vector<int> actual);
+void verifyVector(std::initializer_list<int> expected, std::vector<int> actual, int size);
 
 template <typename T>
 class RemoveDuplicatesFromSortedArrayTestBase : public ::testing::Test 
@@ -26,10 +26,10 @@ TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test1)
   createNums(this->nums, { 1, 2, 2, 3 });
 
   // WHEN
-  this->soluion.removeDuplicates(this->nums);
+  int size = this->soluion.removeDuplicates(this->nums);
 
   // THEN
-  verifyVector({ 1, 2, 3 }, this->nums);
+  verifyVector({ 1, 2, 3 }, this->nums, size);
 }
 
 TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test2)
@@ -38,10 +38,10 @@ TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test2)
   createNums(this->nums, { 2 });
 
   // WHEN
-  this->soluion.removeDuplicates(this->nums);
+  int size = this->soluion.removeDuplicates(this->nums);
 
   // THEN
-  verifyVector({ 2 }, this->nums);
+  verifyVector({ 2 }, this->nums, size);
 }
 
 TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test3)
@@ -50,10 +50,10 @@ TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test3)
   createNums(this->nums, { 2, 2 });
 
   // WHEN
-  this->soluion.removeDuplicates(this->nums);
+  int size = this->soluion.removeDuplicates(this->nums);
 
   // THEN
-  verifyVector({ 2 }, this->nums);
+  verifyVector({ 2 }, this->nums, size);
 }
 
 TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test4)
@@ -62,10 +62,10 @@ TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test4)
   createNums(this->nums, {});
 
   // WHEN
-  this->soluion.removeDuplicates(this->nums);
+  int size = this->soluion.removeDuplicates(this->nums);
 
   // THEN
-  verifyVector({}, this->nums);
+  verifyVector({}, this->nums, size);
 }
 
 TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test5)
@@ -74,10 +74,34 @@ TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test5)
   createNums(this->nums, { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 });
 
   // WHEN
-  this->soluion.removeDuplicates(this->nums);
+  int size = this->soluion.removeDuplicates(this->nums);
 
   // THEN
-  verifyVector({ 0, 1, 2, 3, 4 }, this->nums);
+  verifyVector({ 0, 1, 2, 3, 4 }, this->nums, size);
+}
+
+TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test6)
+{
+  // GIVEN
+  createNums(this->nums, { 1, 1, 2 });
+
+  // WHEN
+  int size = this->soluion.removeDuplicates(this->nums);
+
+  // THEN
+  verifyVector({ 1, 2 }, this->nums, size);
+}
+
+TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test7)
+{
+  // GIVEN
+  createNums(this->nums, { 1, 2 });
+
+  // WHEN
+  int size = this->soluion.removeDuplicates(this->nums);
+
+  // THEN
+  verifyVector({ 1, 2 }, this->nums, size);
 }
 
 void createNums(std::vector<int> &nums, std::initializer_list<int> li)
@@ -88,11 +112,11 @@ void createNums(std::vector<int> &nums, std::initializer_list<int> li)
   }
 }
 
-void verifyVector(std::initializer_list<int> expected, std::vector<int> actual)
+void verifyVector(std::initializer_list<int> expected, std::vector<int> actual, int size)
 {
+  ASSERT_EQ(expected.size(), size);
   const int *ptr = expected.begin();
-  ASSERT_EQ(expected.size(), actual.size());
-  for (int i = 0; i < expected.size(); i++)
+  for (int i = 0; i < size; i++)
   {
     ASSERT_EQ(*(ptr++), actual[i]);
   }

@@ -9,4 +9,10 @@ public:
   int removeDuplicates(std::vector<int> &nums) override;
 };
 
+class Solution2 : RemoveDuplicatesFromSortedArray
+{
+public:
+  int removeDuplicates(std::vector<int> &nums) override;
+};
+
 #endif

@@ -13,6 +13,7 @@ set(IMPLEMENTATION_SOURCES
   "validparentheses/Solution1.cpp"
   "mergetwosortedlists/Solution1.cpp"
   "removeduplicatesfromsortedarray/Solution1.cpp"
+  "removeduplicatesfromsortedarray/Solution2.cpp"
 )
 
 add_library(SolutionLib
