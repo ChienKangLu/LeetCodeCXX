@@ -178,8 +178,8 @@ create_solution_source_file() {
 
 get_solution_source_file_template() {
     local template="\
-#ifndef ${upper_case_with_underline_question_name}_SOLUTION_H_
-#define ${upper_case_with_underline_question_name}_SOLUTION_H_
+#ifndef ${upper_case_with_underline_question_name}_SOLUTION1_H_
+#define ${upper_case_with_underline_question_name}_SOLUTION1_H_
 
 #include \"questions/${lower_case_no_space_question_name}/Solution.hpp\"
 
