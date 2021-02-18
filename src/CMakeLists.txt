@@ -17,6 +17,7 @@ set(IMPLEMENTATION_SOURCES
   "removeduplicatesfromsortedarray/Solution1.cpp"
   "removeduplicatesfromsortedarray/Solution2.cpp"
   "removeelement/Solution1.cpp"
+  "removeelement/Solution2.cpp"
 )
 
 add_library(SolutionLib

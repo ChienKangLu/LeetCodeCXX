@@ -1,6 +1,6 @@
 #include "RemoveElementTestBase.hpp"
 
-typedef testing::Types<Solution1> TestTypes;
+typedef testing::Types<Solution1, Solution2> TestTypes;
 
 class TypeNames {
 public:
@@ -9,6 +9,10 @@ public:
     if (std::is_same<T, Solution1>())
     {
       return "Solution1";
+    }
+    else if (std::is_same<T, Solution2>())
+    {
+      return "Solution2";
     }
   }
 };

@@ -9,4 +9,11 @@ public:
   int removeElement(std::vector<int> &nums, int val) override;
 };
 
+class Solution2 : RemoveElement
+{
+public:
+  int removeElement(std::vector<int> &nums, int val) override;
+};
+
+
 #endif
