@@ -42,13 +42,17 @@ create() {
     create_question_header_dir
     create_question_header_file
     create_solution_header_file
+    append_question_header_file_to_cmakelists
+    append_solution_header_file_to_cmakelists
 
     create_solution_source_dir
     create_solution_source_file
+    append_solution_source_file_to_cmakelists
 
     create_test_source_dir
     create_test_base_source_file
     create_test_source_file
+    append_test_source_file_to_cmakelists
 }
 
 action() {
@@ -284,6 +288,139 @@ REGISTER_TYPED_TEST_SUITE_P(${no_sapce_question_name}TestBase,
 INSTANTIATE_TYPED_TEST_SUITE_P(${no_sapce_question_name}Test, ${no_sapce_question_name}TestBase, TestTypes, TypeNames);\
 "
     echo "${template}"
+}
+
+append_question_header_file_to_cmakelists() {
+    action "Append question header file to cmakelists (Start)"
+    local file="./src/CMakeLists.txt"
+    local anchor="set\(INTERFACE_FILES "
+    local target="\)"
+    local insert="\ \ \"${include_questions_dir}/${lower_case_no_space_question_name}/${question_header_file_name}\""
+    insert="${insert/./\$\{PROJECT_SOURCE_DIR\}}"
+    echo "Append ${insert} to ${file}"
+    append_to_cmakelists_by_anchor "${file}" "${anchor}" "${target}" "${insert}"
+    action "Append question header file to cmakelists (End)"
+}
+
+append_solution_header_file_to_cmakelists() {
+    action "Append solution header file to cmakelists (Start)"
+    local file="./src/CMakeLists.txt"
+    local anchor="set\(INTERFACE_FILES "
+    local target="\)"
+    local insert="\ \ \"${include_questions_dir}/${lower_case_no_space_question_name}/${solution_header_file_name}\""
+    insert="${insert/./\$\{PROJECT_SOURCE_DIR\}}"
+    echo "Append ${insert} to ${file}"
+    append_to_cmakelists_by_anchor "${file}" "${anchor}" "${target}" "${insert}"
+    action "Append solution header file to cmakelists (End)"
+}
+
+append_solution_source_file_to_cmakelists() {
+    action "Append solution source file to cmakelists (Start)"
+    local file="./src/CMakeLists.txt"
+    local anchor="set\(IMPLEMENTATION_SOURCES"
+    local target="\)"
+    local insert="\ \ \"${lower_case_no_space_question_name}/${solution_source_file_name}\""
+    echo "Append ${insert} to ${file}"
+    append_to_cmakelists_by_anchor "${file}" "${anchor}" "${target}" "${insert}"
+    action "Append solution source file to cmakelists (End)"
+}
+
+append_test_source_file_to_cmakelists() {
+    action "Append test source file to cmakelists (Start)"
+    local file="./tests/CMakeLists.txt"
+    local target="add_unittest\("
+    local insert="add_unittest(${no_sapce_question_name}Test)"
+    echo "Append ${insert} to ${file}"
+    append_to_cmakelists_after_last_target "${file}" "${target}" "${insert}"
+    action "Append test source file to cmakelists (End)"
+}
+
+append_to_cmakelists_by_anchor() {
+    local file="${1}"
+    local anchor="${2}"
+    local target="${3}"
+    local insert="${4}"
+    if [ $(grep -c "${insert}" "${file}") -ge 1 ]
+    then
+        echo "${insert} exists."
+    else
+        local line_number="$(line_number_of_target_after_anchor "${file}" "${anchor}" "${target}")"
+        insert_before_line_number "${file}" "${line_number}" "${insert}"
+    fi
+}
+
+insert_before_line_number() {
+    local file="${1}"
+    local line_number=$((${2} - 1))
+    local insert="${3}"
+    sed -i ''"${line_number}"' a '"${insert}"'' "${file}"
+}
+
+line_number_of_target_after_anchor() {
+    local file="${1}"
+    local anchor="${2}"
+    local target="${3}"
+    echo "$(awk \
+    '
+        BEGIN {
+            isAnchorFound = 0;
+            lineNumberOfTarget = 0;
+        }
+        {
+            if (!isAnchorFound && $0 ~ /'"${anchor}"'/) {
+                isAnchorFound = 1;
+            }
+            if (!lineNumberOfTarget && isAnchorFound && $0 ~ /'"${target}"'/) {
+                lineNumberOfTarget = NR;
+            }
+        }
+        END {
+            print(lineNumberOfTarget)
+        }
+    ' \
+    "${file}"
+    )"
+}
+
+append_to_cmakelists_after_last_target() {
+    local file="${1}"
+    local target="${2}"
+    local insert="${3}"
+    if [ $(grep -c "${insert}" "${file}") -ge 1 ]
+    then
+        echo "${insert} exists."
+    else
+        local line_number="$(line_number_of_last_target "${file}" "${target}")"
+        insert_after_line_number "${file}" "${line_number}" "${insert}"
+    fi
+}
+
+line_number_of_last_target() {
+    local file="${1}"
+    local target="${2}"
+    echo "$(awk \
+    '
+        BEGIN {
+            lineNumberOfTarget = 0;
+        }
+        {
+            if ($0 ~ /'"${target}"'/) {
+                lineNumberOfTarget = NR;
+            }
+        }
+        END {
+            print(lineNumberOfTarget)
+        }
+    ' \
+    "${file}"
+    )"
+}
+
+insert_after_line_number() {
+    local file="${1}"
+    local line_number="${2}"
+    local insert="${3}"
+    sed -i ''"${line_number}"' a '"${insert}"'' "${file}"
 }
 
 create "${1}"
