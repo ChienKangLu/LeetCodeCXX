@@ -9,6 +9,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/removeduplicatesfromsortedarray/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/removeelement/RemoveElement.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/removeelement/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/implementstrstr/ImplementStrstr.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/implementstrstr/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -18,6 +20,7 @@ set(IMPLEMENTATION_SOURCES
   "removeduplicatesfromsortedarray/Solution2.cpp"
   "removeelement/Solution1.cpp"
   "removeelement/Solution2.cpp"
+  "implementstrstr/Solution1.cpp"
 )
 
 add_library(SolutionLib
