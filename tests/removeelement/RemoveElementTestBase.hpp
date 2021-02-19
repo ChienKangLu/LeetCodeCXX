@@ -15,7 +15,7 @@ protected:
 
   void TearDown() override {}
 
-  T soluion = T();
+  T solution = T();
   std::vector<int> nums;
   int val;
 };
@@ -29,7 +29,7 @@ TYPED_TEST_P(RemoveElementTestBase, test1)
     this->val = 3;
     
     // WHEN
-    int size = this->soluion.removeElement(this->nums, this->val);
+    int size = this->solution.removeElement(this->nums, this->val);
 
     // THEN
     verifyNums({ 2, 2 }, this->nums, size);
@@ -43,7 +43,7 @@ TYPED_TEST_P(RemoveElementTestBase, test2)
     this->val = 2;
     
     // WHEN
-    int size = this->soluion.removeElement(this->nums, this->val);
+    int size = this->solution.removeElement(this->nums, this->val);
 
     // THEN
     verifyNums({ 0, 1, 4, 0, 3 }, this->nums, size);
@@ -56,7 +56,7 @@ TYPED_TEST_P(RemoveElementTestBase, test3)
     this->val = 2;
     
     // WHEN
-    int size = this->soluion.removeElement(this->nums, this->val);
+    int size = this->solution.removeElement(this->nums, this->val);
 
     // THEN
     verifyNums({ 1 }, this->nums, size);
@@ -69,7 +69,7 @@ TYPED_TEST_P(RemoveElementTestBase, test4)
     this->val = 6;
     
     // WHEN
-    int size = this->soluion.removeElement(this->nums, this->val);
+    int size = this->solution.removeElement(this->nums, this->val);
 
     // THEN
     verifyNums({ 1, 2, 3, 4, 5, 7, 9 }, this->nums, size);

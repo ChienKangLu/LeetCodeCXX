@@ -9,7 +9,7 @@ protected:
 
   void TearDown() override {}
 
-  T soluion = T();
+  T solution = T();
   std::string haystack;
   std::string needle; 
 };
@@ -23,7 +23,7 @@ TYPED_TEST_P(ImplementStrstrTestBase, test1)
     this->needle = "ab";
     
     // WHEN
-    int index = this->soluion.strStr(this->haystack, this->needle);
+    int index = this->solution.strStr(this->haystack, this->needle);
 
     // THEN
     ASSERT_EQ(0, index);
@@ -36,7 +36,7 @@ TYPED_TEST_P(ImplementStrstrTestBase, test2)
     this->needle = "ll";
     
     // WHEN
-    int index = this->soluion.strStr(this->haystack, this->needle);
+    int index = this->solution.strStr(this->haystack, this->needle);
 
     // THEN
     ASSERT_EQ(2, index);
@@ -49,7 +49,7 @@ TYPED_TEST_P(ImplementStrstrTestBase, test3)
     this->needle = "bba";
     
     // WHEN
-    int index = this->soluion.strStr(this->haystack, this->needle);
+    int index = this->solution.strStr(this->haystack, this->needle);
 
     // THEN
     ASSERT_EQ(-1, index);
@@ -62,7 +62,7 @@ TYPED_TEST_P(ImplementStrstrTestBase, test4)
     this->needle = "";
     
     // WHEN
-    int index = this->soluion.strStr(this->haystack, this->needle);
+    int index = this->solution.strStr(this->haystack, this->needle);
 
     // THEN
     ASSERT_EQ(0, index);
@@ -75,7 +75,7 @@ TYPED_TEST_P(ImplementStrstrTestBase, test5)
     this->needle = "issip";
     
     // WHEN
-    int index = this->soluion.strStr(this->haystack, this->needle);
+    int index = this->solution.strStr(this->haystack, this->needle);
 
     // THEN
     ASSERT_EQ(4, index);
@@ -88,7 +88,7 @@ TYPED_TEST_P(ImplementStrstrTestBase, test6)
     this->needle = "defgh";
     
     // WHEN
-    int index = this->soluion.strStr(this->haystack, this->needle);
+    int index = this->solution.strStr(this->haystack, this->needle);
 
     // THEN
     ASSERT_EQ(-1, index);

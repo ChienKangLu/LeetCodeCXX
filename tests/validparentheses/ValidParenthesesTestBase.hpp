@@ -9,7 +9,7 @@ protected:
 
   void TearDown() override {}
 
-  T soluion = T();
+  T solution = T();
 };
 
 TYPED_TEST_SUITE_P(ValidParenthesesTestBase);
@@ -20,7 +20,7 @@ TYPED_TEST_P(ValidParenthesesTestBase, test1)
   std::string s = "()";
 
   // WHEN
-  bool isValid = this->soluion.isValid(s);
+  bool isValid = this->solution.isValid(s);
 
   // THEN
   EXPECT_TRUE(isValid);
@@ -32,7 +32,7 @@ TYPED_TEST_P(ValidParenthesesTestBase, test2)
   std::string s = "()[]{}";
 
   // WHEN
-  bool isValid = this->soluion.isValid(s);
+  bool isValid = this->solution.isValid(s);
 
   // THEN
   EXPECT_TRUE(isValid);
@@ -44,7 +44,7 @@ TYPED_TEST_P(ValidParenthesesTestBase, test3)
   std::string s = "(]";
 
   // WHEN
-  bool isValid = this->soluion.isValid(s);
+  bool isValid = this->solution.isValid(s);
 
   // THEN
   EXPECT_FALSE(isValid);
@@ -56,7 +56,7 @@ TYPED_TEST_P(ValidParenthesesTestBase, test4)
   std::string s = "([)]";
 
   // WHEN
-  bool isValid = this->soluion.isValid(s);
+  bool isValid = this->solution.isValid(s);
 
   // THEN
   EXPECT_FALSE(isValid);
@@ -68,7 +68,7 @@ TYPED_TEST_P(ValidParenthesesTestBase, test5)
   std::string s = "{[]}";
 
   // WHEN
-  bool isValid = this->soluion.isValid(s);
+  bool isValid = this->solution.isValid(s);
 
   // THEN
   EXPECT_TRUE(isValid);
@@ -80,7 +80,7 @@ TYPED_TEST_P(ValidParenthesesTestBase, test6)
   std::string s = "]";
 
   // WHEN
-  bool isValid = this->soluion.isValid(s);
+  bool isValid = this->solution.isValid(s);
 
   // THEN
   EXPECT_FALSE(isValid);
@@ -92,7 +92,7 @@ TYPED_TEST_P(ValidParenthesesTestBase, test7)
   std::string s = "(])";
 
   // WHEN
-  bool isValid = this->soluion.isValid(s);
+  bool isValid = this->solution.isValid(s);
 
   // THEN
   EXPECT_FALSE(isValid);

@@ -18,7 +18,7 @@ protected:
 
   void TearDown() override {}
 
-  T soluion = T();
+  T solution = T();
   ListNode *l1 = nullptr;
   ListNode *l2 = nullptr;
 };
@@ -32,7 +32,7 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test1)
   this->l2 = createList({});
 
   // WHEN
-  ListNode *result = this->soluion.mergeTwoLists(this->l1, this->l2);
+  ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
   const std::string resultString = *ListToString(result);
 
   // THEN
@@ -46,7 +46,7 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test2)
   this->l2 = createList({});
 
   // WHEN
-  ListNode *result = this->soluion.mergeTwoLists(this->l1, this->l2);
+  ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
   const std::string resultString = *ListToString(result);
 
   // THEN
@@ -60,7 +60,7 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test3)
   this->l2 = createList({ 1, 2, 3, 4 });
 
   // WHEN
-  ListNode *result = this->soluion.mergeTwoLists(this->l1, this->l2);
+  ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
   const std::string resultString = *ListToString(result);
 
   // THEN
@@ -74,7 +74,7 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test4)
   this->l2 = createList({ 1 });
 
   // WHEN
-  ListNode *result = this->soluion.mergeTwoLists(this->l1, this->l2);
+  ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
   const std::string resultString = *ListToString(result);
 
   // THEN
@@ -88,7 +88,7 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test5)
   this->l2 = createList({ 1, 1 });
 
   // WHEN
-  ListNode *result = this->soluion.mergeTwoLists(this->l1, this->l2);
+  ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
   const std::string resultString = *ListToString(result);
 
   // THEN
@@ -102,7 +102,7 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test6)
   this->l2 = createList({ 10});
 
   // WHEN
-  ListNode *result = this->soluion.mergeTwoLists(this->l1, this->l2);
+  ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
   const std::string resultString = *ListToString(result);
 
   // THEN
@@ -116,7 +116,7 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test7)
   this->l2 = createList({ 10, 10 });
 
   // WHEN
-  ListNode *result = this->soluion.mergeTwoLists(this->l1, this->l2);
+  ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
   const std::string resultString = *ListToString(result);
 
   // THEN
@@ -130,7 +130,7 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test8)
   this->l2 = createList({ 6, 7});
 
   // WHEN
-  ListNode *result = this->soluion.mergeTwoLists(this->l1, this->l2);
+  ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
   const std::string resultString = *ListToString(result);
 
   // THEN
@@ -144,7 +144,7 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test9)
   this->l2 = createList({ 1, 3, 6, 7, 9});
 
   // WHEN
-  ListNode *result = this->soluion.mergeTwoLists(this->l1, this->l2);
+  ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
   const std::string resultString = *ListToString(result);
 
   // THEN
@@ -158,7 +158,7 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test10)
   this->l2 = createList({ 1, 10});
 
   // WHEN
-  ListNode *result = this->soluion.mergeTwoLists(this->l1, this->l2);
+  ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
   const std::string resultString = *ListToString(result);
 
   // THEN
@@ -172,7 +172,7 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test11)
   this->l2 = createList({ 1, 3, 4 });
 
   // WHEN
-  ListNode *result = this->soluion.mergeTwoLists(this->l1, this->l2);
+  ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
   const std::string resultString = *ListToString(result);
 
   // THEN
@@ -186,7 +186,7 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test12)
   this->l2 = createList({ 0 });
 
   // WHEN
-  ListNode *result = this->soluion.mergeTwoLists(this->l1, this->l2);
+  ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
   const std::string resultString = *ListToString(result);
 
   // THEN

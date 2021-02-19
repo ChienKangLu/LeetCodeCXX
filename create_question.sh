@@ -234,7 +234,7 @@ protected:
 
   void TearDown() override {}
 
-  T soluion = T();
+  T solution = T();
 };
 
 TYPED_TEST_SUITE_P(${no_sapce_question_name}TestBase);

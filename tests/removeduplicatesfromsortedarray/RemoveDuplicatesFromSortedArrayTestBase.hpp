@@ -14,7 +14,7 @@ protected:
 
   void TearDown() override {}
 
-  T soluion = T();
+  T solution = T();
   std::vector<int> nums;
 };
 
@@ -26,7 +26,7 @@ TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test1)
   createNums(this->nums, { 1, 2, 2, 3 });
 
   // WHEN
-  int size = this->soluion.removeDuplicates(this->nums);
+  int size = this->solution.removeDuplicates(this->nums);
 
   // THEN
   verifyVector({ 1, 2, 3 }, this->nums, size);
@@ -38,7 +38,7 @@ TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test2)
   createNums(this->nums, { 2 });
 
   // WHEN
-  int size = this->soluion.removeDuplicates(this->nums);
+  int size = this->solution.removeDuplicates(this->nums);
 
   // THEN
   verifyVector({ 2 }, this->nums, size);
@@ -50,7 +50,7 @@ TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test3)
   createNums(this->nums, { 2, 2 });
 
   // WHEN
-  int size = this->soluion.removeDuplicates(this->nums);
+  int size = this->solution.removeDuplicates(this->nums);
 
   // THEN
   verifyVector({ 2 }, this->nums, size);
@@ -62,7 +62,7 @@ TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test4)
   createNums(this->nums, {});
 
   // WHEN
-  int size = this->soluion.removeDuplicates(this->nums);
+  int size = this->solution.removeDuplicates(this->nums);
 
   // THEN
   verifyVector({}, this->nums, size);
@@ -74,7 +74,7 @@ TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test5)
   createNums(this->nums, { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 });
 
   // WHEN
-  int size = this->soluion.removeDuplicates(this->nums);
+  int size = this->solution.removeDuplicates(this->nums);
 
   // THEN
   verifyVector({ 0, 1, 2, 3, 4 }, this->nums, size);
@@ -86,7 +86,7 @@ TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test6)
   createNums(this->nums, { 1, 1, 2 });
 
   // WHEN
-  int size = this->soluion.removeDuplicates(this->nums);
+  int size = this->solution.removeDuplicates(this->nums);
 
   // THEN
   verifyVector({ 1, 2 }, this->nums, size);
@@ -98,7 +98,7 @@ TYPED_TEST_P(RemoveDuplicatesFromSortedArrayTestBase, test7)
   createNums(this->nums, { 1, 2 });
 
   // WHEN
-  int size = this->soluion.removeDuplicates(this->nums);
+  int size = this->solution.removeDuplicates(this->nums);
 
   // THEN
   verifyVector({ 1, 2 }, this->nums, size);
