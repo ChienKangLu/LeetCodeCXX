@@ -24,6 +24,7 @@ set(IMPLEMENTATION_SOURCES
   "removeelement/Solution2.cpp"
   "implementstrstr/Solution1.cpp"
   "searchinsertposition/Solution1.cpp"
+  "searchinsertposition/Solution2.cpp"
 )
 
 add_library(SolutionLib

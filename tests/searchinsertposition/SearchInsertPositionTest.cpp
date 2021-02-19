@@ -1,6 +1,6 @@
 #include "SearchInsertPositionTestBase.hpp"
 
-typedef testing::Types<Solution1> TestTypes;
+typedef testing::Types<Solution1, Solution2> TestTypes;
 
 class TypeNames {
 public:
@@ -10,6 +10,10 @@ public:
     {
       return "Solution1";
     }
+    else if (std::is_same<T, Solution2>())
+    {
+      return "Solution2";
+    }
   }
 };
 
@@ -18,6 +22,7 @@ REGISTER_TYPED_TEST_SUITE_P(SearchInsertPositionTestBase,
                             test2,
                             test3, 
                             test4, 
-                            test5);
+                            test5,
+                            test6);
 
 INSTANTIATE_TYPED_TEST_SUITE_P(SearchInsertPositionTest, SearchInsertPositionTestBase, TestTypes, TypeNames);

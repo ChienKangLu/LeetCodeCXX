@@ -80,3 +80,16 @@ TYPED_TEST_P(SearchInsertPositionTestBase, test5)
     // THEN
     ASSERT_EQ(0, index);
 }
+
+TYPED_TEST_P(SearchInsertPositionTestBase, test6)
+{
+    // GIVEN
+    this->nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    this->target = 10;
+
+    // WHEN
+    int index = this->solution.searchInsert(this->nums, this->target);
+
+    // THEN
+    ASSERT_EQ(9, index);
+}
