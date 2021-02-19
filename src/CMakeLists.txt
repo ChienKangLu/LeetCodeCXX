@@ -11,6 +11,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/removeelement/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/implementstrstr/ImplementStrstr.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/implementstrstr/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/searchinsertposition/SearchInsertPosition.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/searchinsertposition/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -21,6 +23,7 @@ set(IMPLEMENTATION_SOURCES
   "removeelement/Solution1.cpp"
   "removeelement/Solution2.cpp"
   "implementstrstr/Solution1.cpp"
+  "searchinsertposition/Solution1.cpp"
 )
 
 add_library(SolutionLib
