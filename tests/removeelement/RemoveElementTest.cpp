@@ -13,6 +13,8 @@ public:
     else if (std::is_same<T, Solution2>())
     {
       return "Solution2";
+    } else {
+      return "";
     }
   }
 };

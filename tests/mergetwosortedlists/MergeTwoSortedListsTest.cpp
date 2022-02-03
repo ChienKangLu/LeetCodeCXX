@@ -10,6 +10,8 @@ public:
     if (std::is_same<T, Solution1>())
     {
       return "Solution1";
+    } else {
+      return "";
     }
   }
 };
