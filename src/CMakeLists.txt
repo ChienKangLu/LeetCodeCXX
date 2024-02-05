@@ -28,6 +28,7 @@ set(IMPLEMENTATION_SOURCES
   "searchinsertposition/Solution1.cpp"
   "searchinsertposition/Solution2.cpp"
   "sortlist/Solution1.cpp"
+  "sortlist/Solution2.cpp"
 )
 
 add_library(SolutionLib

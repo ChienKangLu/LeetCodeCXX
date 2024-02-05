@@ -3,9 +3,6 @@
 
 #include "questions/sortlist/Solution.hpp"
 
-ListNode* getMid(ListNode* head);
-ListNode* merge(ListNode* l1, ListNode* l2);
-
 ListNode* Solution1::sortList(ListNode* head) {
     if (head == nullptr || head->next == nullptr) {
         return head;
@@ -24,7 +21,7 @@ ListNode* Solution1::sortList(ListNode* head) {
     return merge(left, right);
 }
 
-ListNode* getMid(ListNode* head) {
+ListNode* Solution1::getMid(ListNode* head) {
     ListNode* slow = head;
     ListNode* fast = head->next;
     while (fast != nullptr && fast->next != nullptr) {
@@ -34,7 +31,7 @@ ListNode* getMid(ListNode* head) {
     return slow;
 }
 
-ListNode* merge(ListNode* l1, ListNode* l2) {
+ListNode* Solution1::merge(ListNode* l1, ListNode* l2) {
     ListNode dummy;
     ListNode* tail = &dummy;
 
