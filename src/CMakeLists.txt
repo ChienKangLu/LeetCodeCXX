@@ -1,9 +1,9 @@
 set(INTERFACE_FILES 
+  "${PROJECT_SOURCE_DIR}/include/questions/common/ListNode.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/Question.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/validparentheses/ValidParentheses.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/validparentheses/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/mergetwosortedlists/MergeTwoSortedLists.hpp"
-  "${PROJECT_SOURCE_DIR}/include/questions/mergetwosortedlists/ListNode.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/mergetwosortedlists/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/removeduplicatesfromsortedarray/RemoveDuplicatesFromSortedArray.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/removeduplicatesfromsortedarray/Solution.hpp"
@@ -13,6 +13,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/implementstrstr/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/searchinsertposition/SearchInsertPosition.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/searchinsertposition/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/sortlist/SortList.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/sortlist/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -25,6 +27,7 @@ set(IMPLEMENTATION_SOURCES
   "implementstrstr/Solution1.cpp"
   "searchinsertposition/Solution1.cpp"
   "searchinsertposition/Solution2.cpp"
+  "sortlist/Solution1.cpp"
 )
 
 add_library(SolutionLib

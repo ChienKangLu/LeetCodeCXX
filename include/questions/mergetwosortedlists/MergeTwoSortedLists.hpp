@@ -2,7 +2,7 @@
 #define QUESTIONS_MERGE_TWO_SORTED_LISTS_MERGE_TWO_SORTED_LISTS_H_
 
 #include "../Question.hpp"
-#include "ListNode.hpp"
+#include "../common/ListNode.hpp"
 
 class MergeTwoSortedLists : public Question
 {

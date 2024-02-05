@@ -3,12 +3,7 @@
 #include "questions/mergetwosortedlists/Solution.hpp"
 #include <iterator>
 #include <string>
-
-ListNode *createList(std::initializer_list<int> li);
-
-ListNode *createList(const int *begin, const int *end);
-
-std::string *ListToString(ListNode *beg);
+#include "../utils/ListNodeUtils.cpp"
 
 template <typename T>
 class MergeTwoSortedListsTestBase : public ::testing::Test 
@@ -191,47 +186,4 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test12)
 
   // THEN
   EXPECT_STREQ("[0]", resultString.c_str());
-}
-
-ListNode *createList(std::initializer_list<int> li)
-{
-  return createList(std::begin(li), std::end(li));
-}
-
-ListNode *createList(const int *begin, const int *end)
-{
-  ListNode *head = nullptr;
-  ListNode *ptr = nullptr;
-  for (const int *beg = begin; beg != end; beg++)
-  {
-    ListNode *node = new ListNode(*beg);
-    if (beg == begin)
-    {
-      head = node;
-      ptr = head;
-    }
-    else
-    {
-      ptr->next = node;
-      ptr = ptr->next;
-    }
-  }
-  return head;
-}
-
-std::string *ListToString(ListNode *begin)
-{
-  std::string *output = new std::string("[");
-  ListNode* first = begin;
-  while(begin != nullptr)
-  {
-    if (begin != first)
-    {
-      *output += " ";
-    }
-    *output += std::to_string(begin->val);
-    begin = begin->next;
-  }
-  *output += "]";
-  return output;
 }
