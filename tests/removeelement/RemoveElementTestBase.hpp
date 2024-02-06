@@ -5,7 +5,7 @@
 
 void createNums(std::vector<int> &nums, std::initializer_list<int> li);
 
-void verifyNums(std::initializer_list<int> expected, std::vector<int> actual, int size);
+void verifyNums(std::initializer_list<int> expected, std::vector<int> actual, int size, int expectedSize);
 
 template <typename T>
 class RemoveElementTestBase : public ::testing::Test 
@@ -32,7 +32,7 @@ TYPED_TEST_P(RemoveElementTestBase, test1)
     int size = this->solution.removeElement(this->nums, this->val);
 
     // THEN
-    verifyNums({ 2, 2 }, this->nums, size);
+    verifyNums({ 2, 2 }, this->nums, size, 2);
 
 }
 
@@ -46,7 +46,7 @@ TYPED_TEST_P(RemoveElementTestBase, test2)
     int size = this->solution.removeElement(this->nums, this->val);
 
     // THEN
-    verifyNums({ 0, 1, 4, 0, 3 }, this->nums, size);
+    verifyNums({ 0, 1, 4, 0, 3 }, this->nums, size, 5);
 }
 
 TYPED_TEST_P(RemoveElementTestBase, test3)
@@ -59,7 +59,7 @@ TYPED_TEST_P(RemoveElementTestBase, test3)
     int size = this->solution.removeElement(this->nums, this->val);
 
     // THEN
-    verifyNums({ 1 }, this->nums, size);
+    verifyNums({ 1 }, this->nums, size, 1);
 }
 
 TYPED_TEST_P(RemoveElementTestBase, test4)
@@ -72,7 +72,7 @@ TYPED_TEST_P(RemoveElementTestBase, test4)
     int size = this->solution.removeElement(this->nums, this->val);
 
     // THEN
-    verifyNums({ 1, 2, 3, 4, 5, 7, 9 }, this->nums, size);
+    verifyNums({ 1, 2, 3, 4, 5, 7, 9 }, this->nums, size, 7);
 }
 
 void createNums(std::vector<int> &nums, std::initializer_list<int> li)
@@ -83,8 +83,9 @@ void createNums(std::vector<int> &nums, std::initializer_list<int> li)
   }
 }
 
-void verifyNums(std::initializer_list<int> expected, std::vector<int> actual, int size)
+void verifyNums(std::initializer_list<int> expected, std::vector<int> actual, int size, int expectedSize)
 {
+  ASSERT_EQ(size, expectedSize);
   for (const int *beg = expected.begin(); beg != expected.end(); beg++)
   {
     ASSERT_TRUE(std::find(actual.begin(), actual.begin() + size, *beg) != actual.begin() + size + 1);
