@@ -353,7 +353,34 @@ insert_before_line_number() {
     local file="${1}"
     local line_number=$((${2} - 1))
     local insert="${3}"
-    sed -i ''"${line_number}"' a '"${insert}"'' "${file}"
+
+    insert_line_number "${file}" "${line_number}" "${insert}"
+}
+
+insert_line_number() {
+    local file="${1}"
+    local line_number="${2}"
+    local insert="${3}"
+
+    if [ "$(uname)" == "Darwin" ]
+    then
+        line_number=$((${line_number} + 1))
+        mac_insert_line_number "${file}" "${line_number}" "${insert}"
+    else
+        sed -i ''"${line_number}"' a '"${insert}"'' "${file}"
+    fi
+}
+
+mac_insert_line_number() {
+    local file="${1}"
+    local line_number="${2}"
+    local insert="${3}"
+    
+    sed ''"${line_number}"'i\
+'"${insert}"'
+' "${file}" > "${file}".temp
+    rm "${file}"
+    mv "${file}".temp "${file}"
 }
 
 line_number_of_target_after_anchor() {
@@ -420,7 +447,8 @@ insert_after_line_number() {
     local file="${1}"
     local line_number="${2}"
     local insert="${3}"
-    sed -i ''"${line_number}"' a '"${insert}"'' "${file}"
+    
+    insert_line_number "${file}" "${line_number}" "${insert}"
 }
 
 create "${1}"

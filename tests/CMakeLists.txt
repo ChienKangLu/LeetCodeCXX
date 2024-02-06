@@ -26,3 +26,4 @@ add_unittest(ImplementStrstrTest)
 add_unittest(SearchInsertPositionTest)
 add_unittest(SortListTest)
 add_unittest(MergeIntervalsTest)
+

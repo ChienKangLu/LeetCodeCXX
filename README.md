@@ -2,11 +2,6 @@
 
 ```
 ./setup_env.sh
-```
-
-# Generate a Project Buildsystem
-
-```
 ./config.sh
 ```
 
@@ -16,7 +11,7 @@ First, create a question by running command below, then the corresponding templa
 ```
 ./create_question.sh "Remove Duplicates from Sorted Array"
 ```
-Second, declare pure virtual function according to question in `include/questions/[question name]/[question name].hpp`, redefine/override that pure virtual function in `include/questions/[question name]/Solution.hpp` and implement the function in `src/[question name]/Solution1.cpp`. For example:
+Second, declare pure virtual function according to question in `include/questions/[questionname]/[QuestionName].hpp`, redefine/override that pure virtual function in `include/questions/[question name]/Solution.hpp` and implement the function in `src/[questionname]/Solution1.cpp`. For example:
 ```
 // include/questions/mergeintervals/MergeIntervals.hpp
 ...
@@ -43,26 +38,8 @@ vector<vector<int>> Solution1::merge(vector<vector<int>>& intervals) {
 }
 ...
 ```
-Finally, add all these files to `src/CMakeLists.txt`:
 
-```
-set(INTERFACE_FILES 
-...
-  "${PROJECT_SOURCE_DIR}/include/questions/mergeintervals/MergeIntervals.hpp"
-  "${PROJECT_SOURCE_DIR}/include/questions/mergeintervals/Solution.hpp"
-)
-
-set(IMPLEMENTATION_SOURCES
-...
-  "mergeintervals/Solution1.cpp"
-)
-```
-About testing, please write your own unit tests in `tests/[question name]/[question name]Test.cpp` and add `add_unittest([question name])` to `tests/CMakeLists.txt` for compilation, For example:
-
-```
-...
-add_unittest(MergeIntervalsTest)
-```
+Then, you can start to write your own unit tests in `tests/[questionname]/[questionName]Test.cpp`. For example, `tests/mergeintervals/MergeIntervalsTest.cpp`.
 
 # Build
 
