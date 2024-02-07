@@ -1,4 +1,4 @@
-# Sovled questions
+# Solved questions
 
 | #   | Title                                              | Difficulty | Cat. |
 |-----|----------------------------------------------------|------------|------|
@@ -12,3 +12,4 @@
 | 75  | Sort Colors                                        | Medium     | Sort |
 | 148 | Sort List                                          | Medium     | Sort |
 | 179 | Largest Number                                     | Medium     |      |
+| 215 | Kth Largest Element in an Array                    | Medium     | Sort |

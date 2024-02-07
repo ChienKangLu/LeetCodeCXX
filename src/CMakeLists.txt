@@ -21,6 +21,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/largestnumber/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/sortcolors/SortColors.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/sortcolors/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/kthlargestelementinanarray/KthLargestElementInAnArray.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/kthlargestelementinanarray/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -40,6 +42,9 @@ set(IMPLEMENTATION_SOURCES
   "largestnumber/Solution1.cpp"
   "sortcolors/Solution1.cpp"
   "sortcolors/Solution2.cpp"
+  "kthlargestelementinanarray/Solution1.cpp"
+  "kthlargestelementinanarray/Solution2.cpp"
+  "kthlargestelementinanarray/Solution3.cpp"
 )
 
 add_library(SolutionLib
