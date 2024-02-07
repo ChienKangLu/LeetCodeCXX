@@ -9,5 +9,6 @@
 | 28  | Find the Index of the First Occurrence in a String | Easy       |      |
 | 35  | Search Insert Position                             | Easy       |      |
 | 56  | Merge Intervals                                    | Medium     | Sort |
+| 75  | Sort Colors                                        | Medium     | Sort |
 | 148 | Sort List                                          | Medium     | Sort |
 | 179 | Largest Number                                     | Medium     |      |

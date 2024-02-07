@@ -19,6 +19,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/mergeintervals/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/largestnumber/LargestNumber.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/largestnumber/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/sortcolors/SortColors.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/sortcolors/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -36,6 +38,8 @@ set(IMPLEMENTATION_SOURCES
   "sortlist/Solution2.cpp"
   "mergeintervals/Solution1.cpp"
   "largestnumber/Solution1.cpp"
+  "sortcolors/Solution1.cpp"
+  "sortcolors/Solution2.cpp"
 )
 
 add_library(SolutionLib
