@@ -4,6 +4,7 @@
 #include "../Question.hpp"
 #include <string>
 
+// Leetcode 28. Find the Index of the First Occurrence in a String
 class ImplementStrstr : public Question 
 {
 public:

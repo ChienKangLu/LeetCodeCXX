@@ -8,10 +8,13 @@
 # Create question
 
 First, create a question by running command below, then the corresponding template of interfaces and implementations will be created and placed to proper folders:
+
 ```
 ./create_question.sh "Remove Duplicates from Sorted Array"
 ```
+
 Second, declare pure virtual function according to question in `include/questions/[questionname]/[QuestionName].hpp`, redefine/override that pure virtual function in `include/questions/[question name]/Solution.hpp` and implement the function in `src/[questionname]/Solution1.cpp`. For example:
+
 ```
 // include/questions/mergeintervals/MergeIntervals.hpp
 ...
