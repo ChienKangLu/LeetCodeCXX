@@ -1,11 +1,14 @@
-# Setup enviroments
+# LeetCodeCXX
+This is a project for practicing C++.
+
+## Setup enviroments
 
 ```
 ./setup_env.sh
 ./config.sh
 ```
 
-# Create question
+## Create question
 
 First, create a question by running command below, then the corresponding template of interfaces and implementations will be created and placed to proper folders:
 
@@ -44,58 +47,56 @@ vector<vector<int>> Solution1::merge(vector<vector<int>>& intervals) {
 
 Then, you can start to write your own unit tests in `tests/[questionname]/[questionName]Test.cpp`. For example, `tests/mergeintervals/MergeIntervalsTest.cpp`.
 
-# Build
+## Build
 
 ```
 ./build.sh
 ```
 
-# Clean
+## Clean
 
 ```
 ./clean.sh
 ```
 
-# Test
+## Test
 
 Notice: Always build before testing
 
-## Run all test suites
+### Run all test suites
 
 ```
 ./test.sh
 ```
 
-## Run single test suite
+### Run single test suite
 
 ```
 cd /build
 make test MergeTwoSortedListsTest
 ```
 
-## List test cases in single test suite
+### List test cases in single test suite
 
 ```
 cd build/tests
 ./MergeTwoSortedListsTest --gtest_list_tests
 ```
 
-## Run single test case in test suite (Prefered)
+### Run single test case in test suite (Prefered)
 
 ```
 cd build/tests
 ./MergeTwoSortedListsTest --gtest_filter=MergeTwoSortedListsTest/MergeTwoSortedListsTestBase/Solution1.test11
 ```
 
-## Run a set of test case in test suite (Prefered)
+### Run a set of test case in test suite (Prefered)
 
 ```
 cd build/tests
 ./MergeTwoSortedListsTest --gtest_filter=MergeTwoSortedListsTest/MergeTwoSortedListsTestBase/Solution1.test1*
 ```
 
-## Log of test
+### Log of test
 
-```
-Log locates at build/Testing/Temporary/LastTest.log
-```
+Log locates at `build/Testing/Temporary/LastTest.log`

@@ -23,6 +23,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/sortcolors/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/kthlargestelementinanarray/KthLargestElementInAnArray.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/kthlargestelementinanarray/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/medianoftwosortedarrays/MedianOfTwoSortedArrays.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/medianoftwosortedarrays/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -45,6 +47,7 @@ set(IMPLEMENTATION_SOURCES
   "kthlargestelementinanarray/Solution1.cpp"
   "kthlargestelementinanarray/Solution2.cpp"
   "kthlargestelementinanarray/Solution3.cpp"
+  "medianoftwosortedarrays/Solution1.cpp"
 )
 
 add_library(SolutionLib

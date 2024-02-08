@@ -29,4 +29,5 @@ add_unittest(MergeIntervalsTest)
 add_unittest(LargestNumberTest)
 add_unittest(SortColorsTest)
 add_unittest(KthLargestElementInAnArrayTest)
+add_unittest(MedianOfTwoSortedArraysTest)
 
