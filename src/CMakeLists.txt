@@ -29,6 +29,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/reverselinkedlist/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/middleofthelinkedlist/MiddleOfTheLinkedList.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/middleofthelinkedlist/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/intersectionoftwolinkedlists/IntersectionOfTwoLinkedLists.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/intersectionoftwolinkedlists/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -55,6 +57,7 @@ set(IMPLEMENTATION_SOURCES
   "reverselinkedlist/Solution1.cpp"
   "reverselinkedlist/Solution2.cpp"
   "middleofthelinkedlist/Solution1.cpp"
+  "intersectionoftwolinkedlists/Solution1.cpp"
 )
 
 add_library(SolutionLib

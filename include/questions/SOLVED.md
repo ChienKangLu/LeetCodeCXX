@@ -12,6 +12,7 @@
 | 56  | Merge Intervals                                    | Medium     | Sort          |
 | 75  | Sort Colors                                        | Medium     | Sort          |
 | 148 | Sort List                                          | Medium     | Sort          |
+| 160 | Intersection of Two Linked Lists                   | Medium     | Linked List   |
 | 179 | Largest Number                                     | Medium     |               |
 | 206 | Reverse Linked List                                | Easy       | Linked List   |
 | 215 | Kth Largest Element in an Array                    | Medium     | Sort          |

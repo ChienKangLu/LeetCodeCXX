@@ -9,6 +9,8 @@ static ListNode *createList(std::initializer_list<int> li);
 
 static ListNode *createList(const int *begin, const int *end);
 
+static void concatinate(ListNode *head1, ListNode *head2);
+
 static std::string *ListToString(ListNode *beg);
 
 ListNode *createList(std::initializer_list<int> li)
@@ -35,6 +37,14 @@ ListNode *createList(const int *begin, const int *end)
     }
   }
   return head;
+}
+
+
+void concatinate(ListNode *head1, ListNode *head2) {
+  while (head1->next != nullptr) {
+    head1 = head1->next;
+  }
+  head1->next = head2;
 }
 
 std::string *ListToString(ListNode *begin)
