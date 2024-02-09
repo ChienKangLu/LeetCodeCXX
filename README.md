@@ -1,5 +1,5 @@
 # LeetCodeCXX
-This is a project for practicing C++.
+This is a project for solving Leetcode problems with C++. All solved questions are listed at [include/questions/SOLVED.md](include/questions/SOLVED.md).
 
 ## Setup enviroments
 

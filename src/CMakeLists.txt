@@ -27,6 +27,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/medianoftwosortedarrays/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/reverselinkedlist/ReverseLinkedList.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/reverselinkedlist/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/middleofthelinkedlist/MiddleOfTheLinkedList.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/middleofthelinkedlist/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -52,6 +54,7 @@ set(IMPLEMENTATION_SOURCES
   "medianoftwosortedarrays/Solution1.cpp"
   "reverselinkedlist/Solution1.cpp"
   "reverselinkedlist/Solution2.cpp"
+  "middleofthelinkedlist/Solution1.cpp"
 )
 
 add_library(SolutionLib

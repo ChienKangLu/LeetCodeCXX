@@ -31,4 +31,5 @@ add_unittest(SortColorsTest)
 add_unittest(KthLargestElementInAnArrayTest)
 add_unittest(MedianOfTwoSortedArraysTest)
 add_unittest(ReverseLinkedListTest)
+add_unittest(MiddleOfTheLinkedListTest)
 

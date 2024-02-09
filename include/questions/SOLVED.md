@@ -15,3 +15,4 @@
 | 179 | Largest Number                                     | Medium     |               |
 | 206 | Reverse Linked List                                | Easy       | Linked List   |
 | 215 | Kth Largest Element in an Array                    | Medium     | Sort          |
+| 876 | Middle of the Linked List                          | Easy       | Linked List   |
