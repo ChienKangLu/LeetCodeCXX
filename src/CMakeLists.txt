@@ -25,6 +25,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/kthlargestelementinanarray/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/medianoftwosortedarrays/MedianOfTwoSortedArrays.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/medianoftwosortedarrays/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/reverselinkedlist/ReverseLinkedList.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/reverselinkedlist/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -48,6 +50,8 @@ set(IMPLEMENTATION_SOURCES
   "kthlargestelementinanarray/Solution2.cpp"
   "kthlargestelementinanarray/Solution3.cpp"
   "medianoftwosortedarrays/Solution1.cpp"
+  "reverselinkedlist/Solution1.cpp"
+  "reverselinkedlist/Solution2.cpp"
 )
 
 add_library(SolutionLib
