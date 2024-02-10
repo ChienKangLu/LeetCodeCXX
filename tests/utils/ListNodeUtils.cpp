@@ -39,7 +39,6 @@ ListNode *createList(const int *begin, const int *end)
   return head;
 }
 
-
 void concatinate(ListNode *head1, ListNode *head2) {
   while (head1->next != nullptr) {
     head1 = head1->next;
