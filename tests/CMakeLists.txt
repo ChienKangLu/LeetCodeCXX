@@ -34,4 +34,5 @@ add_unittest(ReverseLinkedListTest)
 add_unittest(MiddleOfTheLinkedListTest)
 add_unittest(IntersectionOfTwoLinkedListsTest)
 add_unittest(LinkedListCycleTest)
+add_unittest(LinkedListCycleIITest)
 
