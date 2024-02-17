@@ -35,6 +35,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/linkedlistcycle/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/linkedlistcycleii/LinkedListCycleII.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/linkedlistcycleii/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/reverselinkedlistii/ReverseLinkedListII.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/reverselinkedlistii/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -66,6 +68,7 @@ set(IMPLEMENTATION_SOURCES
   "linkedlistcycle/Solution2.cpp"
   "linkedlistcycleii/Solution1.cpp"
   "linkedlistcycleii/Solution2.cpp"
+  "reverselinkedlistii/Solution1.cpp"
 )
 
 add_library(SolutionLib
