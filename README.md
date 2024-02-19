@@ -1,5 +1,5 @@
 # LeetCodeCXX
-This is a project for solving Leetcode problems with C++. All solved questions are listed at [include/questions/SOLVED.md](include/questions/SOLVED.md).
+This is a project for solving Leetcode problems with C++ and verifying multiple solutions with unit tests (GoogleTest). All solved questions are listed at [include/questions/SOLVED.md](include/questions/SOLVED.md).
 
 ## Setup enviroments
 

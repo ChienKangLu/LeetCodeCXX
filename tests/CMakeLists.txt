@@ -37,4 +37,5 @@ add_unittest(LinkedListCycleTest)
 add_unittest(LinkedListCycleIITest)
 add_unittest(ReverseLinkedListIITest)
 add_unittest(OddEvenLinkedListTest)
+add_unittest(ImplementStackUsingQueuesTest)
 

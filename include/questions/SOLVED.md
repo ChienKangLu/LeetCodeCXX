@@ -19,5 +19,6 @@
 | 179 | Largest Number                                     | Medium     |               |
 | 206 | Reverse Linked List                                | Easy       | Linked List   |
 | 215 | Kth Largest Element in an Array                    | Medium     | Sort          |
+| 225 | Implement Stack using Queues                       | Easy       | Queue         |
 | 328 | Odd Even Linked List                               | Medium     | Linked List   |
 | 876 | Middle of the Linked List                          | Easy       | Linked List   |

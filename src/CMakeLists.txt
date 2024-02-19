@@ -39,6 +39,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/reverselinkedlistii/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/oddevenlinkedlist/OddEvenLinkedList.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/oddevenlinkedlist/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/implementstackusingqueues/ImplementStackUsingQueues.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/implementstackusingqueues/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -72,6 +74,7 @@ set(IMPLEMENTATION_SOURCES
   "linkedlistcycleii/Solution2.cpp"
   "reverselinkedlistii/Solution1.cpp"
   "oddevenlinkedlist/Solution1.cpp"
+  "implementstackusingqueues/Solution1.cpp"
 )
 
 add_library(SolutionLib
