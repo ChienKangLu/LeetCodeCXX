@@ -21,4 +21,5 @@
 | 215 | Kth Largest Element in an Array                    | Medium     | Sort          |
 | 225 | Implement Stack using Queues                       | Easy       | Queue         |
 | 328 | Odd Even Linked List                               | Medium     | Linked List   |
+| 346 | Moving Average from Data Stream                    | Easy       | Queue         |
 | 876 | Middle of the Linked List                          | Easy       | Linked List   |

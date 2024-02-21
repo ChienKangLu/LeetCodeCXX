@@ -41,6 +41,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/oddevenlinkedlist/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/implementstackusingqueues/ImplementStackUsingQueues.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/implementstackusingqueues/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/movingaveragefromdatastream/MovingAverageFromDataStream.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/movingaveragefromdatastream/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -75,6 +77,7 @@ set(IMPLEMENTATION_SOURCES
   "reverselinkedlistii/Solution1.cpp"
   "oddevenlinkedlist/Solution1.cpp"
   "implementstackusingqueues/Solution1.cpp"
+  "movingaveragefromdatastream/Solution1.cpp"
 )
 
 add_library(SolutionLib
