@@ -39,4 +39,5 @@ add_unittest(ReverseLinkedListIITest)
 add_unittest(OddEvenLinkedListTest)
 add_unittest(ImplementStackUsingQueuesTest)
 add_unittest(MovingAverageFromDataStreamTest)
+add_unittest(ZigzagIteratorTest)
 

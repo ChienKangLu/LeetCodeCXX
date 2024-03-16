@@ -43,6 +43,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/implementstackusingqueues/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/movingaveragefromdatastream/MovingAverageFromDataStream.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/movingaveragefromdatastream/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/zigzagiterator/ZigzagIterator.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/zigzagiterator/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -78,6 +80,8 @@ set(IMPLEMENTATION_SOURCES
   "oddevenlinkedlist/Solution1.cpp"
   "implementstackusingqueues/Solution1.cpp"
   "movingaveragefromdatastream/Solution1.cpp"
+  "zigzagiterator/Solution1.cpp"
+  "zigzagiterator/Solution2.cpp"
 )
 
 add_library(SolutionLib

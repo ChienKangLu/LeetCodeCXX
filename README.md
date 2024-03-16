@@ -94,7 +94,7 @@ cd build/tests
 
 ```
 cd build/tests
-./MergeTwoSortedListsTest --gtest_filter=MergeTwoSortedListsTest/MergeTwoSortedListsTestBase/Solution1.test1*
+./MergeTwoSortedListsTest --gtest_filter=MergeTwoSortedListsTest/MergeTwoSortedListsTestBase/Solution1.test1
 ```
 
 ### Log of test
