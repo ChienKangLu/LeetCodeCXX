@@ -45,6 +45,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/movingaveragefromdatastream/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/zigzagiterator/ZigzagIterator.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/zigzagiterator/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/firstuniquenumber/FirstUniqueNumber.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/firstuniquenumber/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -82,6 +84,7 @@ set(IMPLEMENTATION_SOURCES
   "movingaveragefromdatastream/Solution1.cpp"
   "zigzagiterator/Solution1.cpp"
   "zigzagiterator/Solution2.cpp"
+  "firstuniquenumber/Solution1.cpp"
 )
 
 add_library(SolutionLib
