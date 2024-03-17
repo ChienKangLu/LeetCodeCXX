@@ -9,6 +9,7 @@
 | 27   | Remove Element                                     | Easy       | Sort          |
 | 28   | Find the Index of the First Occurrence in a String | Easy       |               |
 | 35   | Search Insert Position                             | Easy       |               |
+| 54   | Spiral Matrix                                      | Medium     | Queue         |
 | 56   | Merge Intervals                                    | Medium     | Sort          |
 | 75   | Sort Colors                                        | Medium     | Sort          |
 | 92   | Reverse Linked List II                             | Medium     | Linked List   |
