@@ -49,6 +49,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/firstuniquenumber/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/spiralmatrix/SpiralMatrix.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/spiralmatrix/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/minstack/MinStack.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/minstack/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -88,6 +90,7 @@ set(IMPLEMENTATION_SOURCES
   "zigzagiterator/Solution2.cpp"
   "firstuniquenumber/Solution1.cpp"
   "spiralmatrix/Solution1.cpp"
+  "minstack/Solution1.cpp"
 )
 
 add_library(SolutionLib

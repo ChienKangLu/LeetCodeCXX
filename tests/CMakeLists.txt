@@ -42,4 +42,5 @@ add_unittest(MovingAverageFromDataStreamTest)
 add_unittest(ZigzagIteratorTest)
 add_unittest(FirstUniqueNumberTest)
 add_unittest(SpiralMatrixTest)
+add_unittest(MinStackTest)
 
