@@ -110,11 +110,14 @@ get_question_header_file_template() {
 
 #include \"../Question.hpp\"
 
+namespace ${no_sapce_question_name}
+{
 class ${no_sapce_question_name} : public Question 
 {
 public:
   /* Please declare pure virtual function according to question */
 };
+}  // namespace ${no_sapce_question_name}
 
 #endif\
 "
@@ -142,11 +145,14 @@ get_solution_header_file_template() {
 
 #include \"${question_header_file_name}\"
 
+namespace ${no_sapce_question_name}
+{
 class Solution1 : ${no_sapce_question_name}
 {
 public:
   /* Please redefine/override pure virtual function from ${no_sapce_question_name} */
 };
+}  // namespace ${no_sapce_question_name}
 
 #endif
 "
@@ -187,7 +193,10 @@ get_solution_source_file_template() {
 
 #include \"questions/${lower_case_no_space_question_name}/Solution.hpp\"
 
+namespace ${no_sapce_question_name}
+{
 /* Please implement solution according to \"questions/${lower_case_no_space_question_name}/Solution.hpp\" */
+}  // namespace ${no_sapce_question_name}
 
 #endif\
 "
@@ -269,13 +278,13 @@ get_test_source_file_template() {
     local template="\
 #include \"${test_base_source_file_name}\"
 
-typedef testing::Types<Solution1> TestTypes;
+typedef testing::Types<${no_sapce_question_name}::Solution1> TestTypes;
 
 class TypeNames {
 public:
   template <typename T>
   static std::string GetName(int) {
-    if (std::is_same<T, Solution1>())
+    if (std::is_same<T, ${no_sapce_question_name}::Solution1>())
     {
       return \"Solution1\";
     }
