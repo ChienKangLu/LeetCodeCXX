@@ -43,4 +43,5 @@ add_unittest(ZigzagIteratorTest)
 add_unittest(FirstUniqueNumberTest)
 add_unittest(SpiralMatrixTest)
 add_unittest(MinStackTest)
+add_unittest(Question232Test)
 
