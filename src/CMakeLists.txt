@@ -53,6 +53,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/minstack/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/question232/Question232.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/question232/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/question150/Question150.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/question150/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -94,6 +96,7 @@ set(IMPLEMENTATION_SOURCES
   "spiralmatrix/Solution1.cpp"
   "minstack/Solution1.cpp"
   "question232/Solution1.cpp"
+  "question150/Solution1.cpp"
 )
 
 add_library(SolutionLib

@@ -17,6 +17,7 @@
 | 148  | Sort List                                          | Medium     | Sort          |
 | 141  | Linked List Cycle                                  | Medium     | Linked List   |
 | 142  | Linked List Cycle II                               | Medium     | Linked List   |
+| 150  | Evaluate Reverse Polish Notation                   | Medium     | Stack         |
 | 160  | Intersection of Two Linked Lists                   | Medium     | Linked List   |
 | 179  | Largest Number                                     | Medium     |               |
 | 206  | Reverse Linked List                                | Easy       | Linked List   |
