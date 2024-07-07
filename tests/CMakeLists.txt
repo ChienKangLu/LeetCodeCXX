@@ -45,4 +45,5 @@ add_unittest(SpiralMatrixTest)
 add_unittest(MinStackTest)
 add_unittest(Question232Test)
 add_unittest(Question150Test)
+add_unittest(Question224Test)
 

@@ -22,6 +22,7 @@
 | 179  | Largest Number                                     | Medium     |               |
 | 206  | Reverse Linked List                                | Easy       | Linked List   |
 | 215  | Kth Largest Element in an Array                    | Medium     | Sort          |
+| 224  | Basic Calculator                                   | Hard       | Stack         |
 | 225  | Implement Stack using Queues                       | Easy       | Queue         |
 | 232  | Implement Queue using Stacks                       | Easy       | Stack         |
 | 281  | Zigzag Iterator                                    | Medium     | Queue         |
