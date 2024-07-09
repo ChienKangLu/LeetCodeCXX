@@ -103,6 +103,7 @@ set(IMPLEMENTATION_SOURCES
   "question150/Solution1.cpp"
   "question224/Solution1.cpp"
   "question227/Solution1.cpp"
+  "question227/Solution2.cpp"
 )
 
 add_library(SolutionLib

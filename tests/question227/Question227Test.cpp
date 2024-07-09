@@ -1,6 +1,6 @@
 #include "Question227TestBase.hpp"
 
-typedef testing::Types<Question227::Solution1> TestTypes;
+typedef testing::Types<Question227::Solution1, Question227::Solution2> TestTypes;
 
 class TypeNames {
 public:
@@ -9,6 +9,13 @@ public:
     if (std::is_same<T, Question227::Solution1>())
     {
       return "Solution1";
+    }
+    else if (std::is_same<T, Question227::Solution2>())
+    {
+      return "Solution2";
+    }
+    else {
+      return "";
     }
   }
 };

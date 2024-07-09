@@ -22,6 +22,12 @@ private:
   stack<long> _numbers;
   stack<char> _operators;
 };
+
+class Solution2 : Question227
+{
+public:
+  int calculate(string s) override;
+};
 }  // namespace Question227
 
 #endif
