@@ -13,6 +13,7 @@
 | 56   | Merge Intervals                                    | Medium     | Sort          |
 | 75   | Sort Colors                                        | Medium     | Sort          |
 | 92   | Reverse Linked List II                             | Medium     | Linked List   |
+| 88   | Merge Sorted Array                                 | Easy       | Array         |
 | 155  | Min Stack                                          | Medium     | Stack         |
 | 148  | Sort List                                          | Medium     | Sort          |
 | 141  | Linked List Cycle                                  | Medium     | Linked List   |
