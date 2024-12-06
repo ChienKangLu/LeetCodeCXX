@@ -63,6 +63,12 @@ Then, you can start to write your own unit tests in `tests/[questionname]/[quest
 
 Notice: Always build before testing
 
+### Build & run test
+
+```
+./build.sh && ./build/tests/Question27Test
+```
+
 ### Run all test suites
 
 ```
