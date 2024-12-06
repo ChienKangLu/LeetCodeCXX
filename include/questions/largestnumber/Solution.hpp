@@ -3,9 +3,8 @@
 
 #include "LargestNumber.hpp"
 
-class Solution1 : LargestNumber
-{
-public:
+class Solution1 : LargestNumber {
+ public:
   string largestNumber(vector<int>& nums) override;
 };
 

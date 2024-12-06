@@ -3,9 +3,8 @@
 
 #include "MergeIntervals.hpp"
 
-class Solution1 : MergeIntervals
-{
-public:
+class Solution1 : MergeIntervals {
+ public:
   vector<vector<int>> merge(vector<vector<int>>& intervals) override;
 };
 

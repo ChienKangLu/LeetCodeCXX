@@ -3,26 +3,22 @@
 
 #include "KthLargestElementInAnArray.hpp"
 
-class Solution1 : KthLargestElementInAnArray
-{
-public:
+class Solution1 : KthLargestElementInAnArray {
+ public:
   int findKthLargest(vector<int>& nums, int k) override;
 };
 
-class Solution2 : KthLargestElementInAnArray
-{
-public:
+class Solution2 : KthLargestElementInAnArray {
+ public:
   int findKthLargest(vector<int>& nums, int k) override;
 
-private:
+ private:
   int partition(vector<int>& nums, int start, int end, int k);
 };
 
-class Solution3 : KthLargestElementInAnArray
-{
-public:
+class Solution3 : KthLargestElementInAnArray {
+ public:
   int findKthLargest(vector<int>& nums, int k) override;
 };
-
 
 #endif

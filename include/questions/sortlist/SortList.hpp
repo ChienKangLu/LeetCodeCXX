@@ -4,9 +4,8 @@
 #include "../Question.hpp"
 #include "../common/ListNode.hpp"
 
-class SortList : public Question 
-{
-public:
+class SortList : public Question {
+ public:
   virtual ListNode* sortList(ListNode* head) = 0;
 };
 

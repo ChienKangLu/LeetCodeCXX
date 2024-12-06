@@ -5,9 +5,8 @@
 #include "../common/ListNode.hpp"
 
 // Leetcode 876. Middle of the Linked List
-class MiddleOfTheLinkedList : public Question 
-{
-public:
+class MiddleOfTheLinkedList : public Question {
+ public:
   virtual ListNode* middleNode(ListNode* head) = 0;
 };
 

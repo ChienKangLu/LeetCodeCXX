@@ -3,7 +3,8 @@
 
 #include "questions/kthlargestelementinanarray/Solution.hpp"
 
-int Solution3::findKthLargest(vector<int>& nums, int k) {
+int Solution3::findKthLargest(vector<int> &nums, int k)
+{
     nth_element(nums.begin(), nums.begin() + k - 1, nums.end(), greater<int>());
 
     return nums[k - 1];

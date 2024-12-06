@@ -6,10 +6,13 @@
 
 using namespace std;
 
-ListNode *Solution1::detectCycle(ListNode *head) {
+ListNode *Solution1::detectCycle(ListNode *head)
+{
     unordered_set<ListNode *> visited;
-    while (head != nullptr) {
-        if (visited.count(head) > 0) {
+    while (head != nullptr)
+    {
+        if (visited.count(head) > 0)
+        {
             return head;
         }
         visited.insert(head);

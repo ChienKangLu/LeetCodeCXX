@@ -3,9 +3,8 @@
 
 #include "MergeTwoSortedLists.hpp"
 
-class Solution1 : public MergeTwoSortedLists
-{
-public:
+class Solution1 : public MergeTwoSortedLists {
+ public:
   ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) override;
 };
 

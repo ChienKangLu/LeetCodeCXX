@@ -3,9 +3,8 @@
 
 #include "ReverseLinkedListII.hpp"
 
-class Solution1 : ReverseLinkedListII
-{
-public:
+class Solution1 : ReverseLinkedListII {
+ public:
   ListNode* reverseBetween(ListNode* head, int left, int right) override;
 };
 

@@ -3,9 +3,8 @@
 
 #include "ImplementStrstr.hpp"
 
-class Solution1 : ImplementStrstr
-{
-public:
+class Solution1 : ImplementStrstr {
+ public:
   int strStr(std::string haystack, std::string needle) override;
 };
 

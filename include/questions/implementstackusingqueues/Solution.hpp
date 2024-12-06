@@ -1,24 +1,24 @@
 #ifndef QUESTIONS_IMPLEMENT_STACK_USING_QUEUES_SOLUTION_H_
 #define QUESTIONS_IMPLEMENT_STACK_USING_QUEUES_SOLUTION_H_
 
-#include "ImplementStackUsingQueues.hpp"
 #include <queue>
 
-class Solution1 : MyStack
-{
-public:
-    Solution1();
+#include "ImplementStackUsingQueues.hpp"
 
-    void push(int x) override;
+class Solution1 : MyStack {
+ public:
+  Solution1();
 
-    int pop() override;
-    
-    int top() override;
-    
-    bool empty() override;
+  void push(int x) override;
 
-private:
-    std::queue<int> queue;
+  int pop() override;
+
+  int top() override;
+
+  bool empty() override;
+
+ private:
+  std::queue<int> queue;
 };
 
 #endif

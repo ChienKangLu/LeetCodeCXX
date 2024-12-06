@@ -5,9 +5,8 @@
 #include "../common/ListNode.hpp"
 
 // Leetcode 206. Reverse Linked List
-class ReverseLinkedList : public Question 
-{
-public:
+class ReverseLinkedList : public Question {
+ public:
   virtual ListNode* reverseList(ListNode* head) = 0;
 };
 

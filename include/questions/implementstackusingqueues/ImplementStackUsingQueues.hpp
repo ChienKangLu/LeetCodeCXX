@@ -5,14 +5,14 @@
 
 // Leetcode 225. Implement Stack using Queues
 class MyStack : Question {
-public:
-    virtual void push(int x) = 0;
+ public:
+  virtual void push(int x) = 0;
 
-    virtual int pop() = 0;
-    
-    virtual int top() = 0;
-    
-    virtual bool empty() = 0;
+  virtual int pop() = 0;
+
+  virtual int top() = 0;
+
+  virtual bool empty() = 0;
 };
 
 /**

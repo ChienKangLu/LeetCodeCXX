@@ -3,9 +3,8 @@
 
 #include "SpiralMatrix.hpp"
 
-class Solution1 : SpiralMatrix
-{
-public:
+class Solution1 : SpiralMatrix {
+ public:
   vector<int> spiralOrder(vector<vector<int>>& matrix) override;
 };
 

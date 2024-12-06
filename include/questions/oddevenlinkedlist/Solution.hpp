@@ -3,9 +3,8 @@
 
 #include "OddEvenLinkedList.hpp"
 
-class Solution1 : OddEvenLinkedList
-{
-public:
+class Solution1 : OddEvenLinkedList {
+ public:
   ListNode* oddEvenList(ListNode* head) override;
 };
 

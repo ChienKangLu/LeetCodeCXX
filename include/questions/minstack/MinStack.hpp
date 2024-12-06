@@ -4,16 +4,15 @@
 #include "../Question.hpp"
 
 // Leetcode 155. Min Stack
-class MinStack : public Question 
-{
-public:
-    virtual void minstackPush(int val) = 0;
-    
-    virtual void minstackPop() = 0;
-    
-    virtual int minstackTop() = 0;
-    
-    virtual int minstackGetMin() = 0;
+class MinStack : public Question {
+ public:
+  virtual void minstackPush(int val) = 0;
+
+  virtual void minstackPop() = 0;
+
+  virtual int minstackTop() = 0;
+
+  virtual int minstackGetMin() = 0;
 };
 
 #endif

@@ -3,23 +3,29 @@
 
 #include "questions/firstuniquenumber/Solution.hpp"
 
-Solution1::Solution1(vector<int>& nums): FirstUniqueNumber(nums) {
-    for (auto it : nums) {
+Solution1::Solution1(vector<int> &nums) : FirstUniqueNumber(nums)
+{
+    for (auto it : nums)
+    {
         add(it);
     }
 }
 
-int Solution1::showFirstUnique() {
-    while (!queue.empty() && occur[queue.front()] > 1) {
+int Solution1::showFirstUnique()
+{
+    while (!queue.empty() && occur[queue.front()] > 1)
+    {
         queue.pop();
     }
-    if (queue.empty()) {
+    if (queue.empty())
+    {
         return -1;
     }
     return queue.front();
 }
 
-void Solution1::add(int value) {
+void Solution1::add(int value)
+{
     occur[value]++;
     queue.push(value);
 }

@@ -3,9 +3,8 @@
 
 #include "MiddleOfTheLinkedList.hpp"
 
-class Solution1 : MiddleOfTheLinkedList
-{
-public:
+class Solution1 : MiddleOfTheLinkedList {
+ public:
   ListNode* middleNode(ListNode* head) override;
 };
 

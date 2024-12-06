@@ -5,9 +5,8 @@
 #include "../common/ListNode.hpp"
 
 // Leetcode 21. Merge Two Sorted Lists
-class MergeTwoSortedLists : public Question
-{
-public:
+class MergeTwoSortedLists : public Question {
+ public:
   virtual ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) = 0;
 };
 

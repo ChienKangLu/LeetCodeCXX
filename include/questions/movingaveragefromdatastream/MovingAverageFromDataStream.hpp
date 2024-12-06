@@ -4,17 +4,16 @@
 #include "../Question.hpp"
 
 // Leetcode 346. Moving Average from Data Stream
-class MovingAverage : public Question 
-{
-public:
-  MovingAverage(int size) : size(size) {};
+class MovingAverage : public Question {
+ public:
+  MovingAverage(int size) : size(size){};
 
   virtual double next(int val) = 0;
 
-protected:
+ protected:
   /**
    * the size of window
-  */
+   */
   int size;
 };
 

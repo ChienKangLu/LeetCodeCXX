@@ -3,10 +3,14 @@
 
 #include "questions/movingaveragefromdatastream/Solution.hpp"
 
-Solution1::Solution1(int size) : MovingAverage(size) {}
+Solution1::Solution1(int size) : MovingAverage(size)
+{
+}
 
-double Solution1::next(int val) {
-    if (this->queue.size() == size) {
+double Solution1::next(int val)
+{
+    if (this->queue.size() == size)
+    {
         this->sum -= this->queue.front();
         this->queue.pop_front();
     }
@@ -14,7 +18,7 @@ double Solution1::next(int val) {
     this->queue.push_back(val);
     this->sum += val;
 
-    return (double) this->sum / queue.size();
+    return (double)this->sum / queue.size();
 }
 
 #endif

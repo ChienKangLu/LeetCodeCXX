@@ -6,33 +6,33 @@
 
 using namespace std;
 
-bool Solution1::isValid(std::string s) 
+bool Solution1::isValid(std::string s)
 {
-  stack<char> brackets;
-  for (const char &c : s)
-  {
-    if (c == '(' || c =='[' || c == '{')
+    stack<char> brackets;
+    for (const char &c : s)
     {
-      brackets.push(c);
+        if (c == '(' || c == '[' || c == '{')
+        {
+            brackets.push(c);
+        }
+        else if (!brackets.empty())
+        {
+            const char &top = brackets.top();
+            if (top == '(' && c == ')' || top == '[' && c == ']' || top == '{' && c == '}')
+            {
+                brackets.pop();
+            }
+            else
+            {
+                return false; // Not found corresponding bracket from stack
+            }
+        }
+        else
+        {
+            return false; // Found ')', ']' or '}' while stack is empty.
+        }
     }
-    else if (!brackets.empty())
-    {
-      const char &top = brackets.top();
-      if (top == '(' && c == ')' || top == '[' && c == ']' || top == '{' && c == '}')
-      {
-        brackets.pop();
-      }
-      else
-      {
-        return false; // Not found corresponding bracket from stack
-      }
-    }
-    else
-    {
-      return false; // Found ')', ']' or '}' while stack is empty.
-    }
-  }
-  return brackets.empty();
+    return brackets.empty();
 }
 
 #endif

@@ -3,11 +3,13 @@
 
 #include "questions/middleofthelinkedlist/Solution.hpp"
 
-ListNode* Solution1::middleNode(ListNode* head) {
-    ListNode* slow = head;
-    ListNode* fast = head; // find the second middle
+ListNode *Solution1::middleNode(ListNode *head)
+{
+    ListNode *slow = head;
+    ListNode *fast = head; // find the second middle
 
-    while (fast != nullptr && fast->next != nullptr) {
+    while (fast != nullptr && fast->next != nullptr)
+    {
         slow = slow->next;
         fast = fast->next->next;
     }

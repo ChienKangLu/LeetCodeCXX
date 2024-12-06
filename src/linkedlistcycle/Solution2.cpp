@@ -3,14 +3,17 @@
 
 #include "questions/linkedlistcycle/Solution.hpp"
 
-bool Solution2::hasCycle(ListNode *head) {
-    ListNode* slow = head;
-    ListNode* fast = head;
-    
-    while (fast != nullptr && fast->next != nullptr) {
+bool Solution2::hasCycle(ListNode *head)
+{
+    ListNode *slow = head;
+    ListNode *fast = head;
+
+    while (fast != nullptr && fast->next != nullptr)
+    {
         slow = slow->next;
         fast = fast->next->next;
-        if (slow == fast) {
+        if (slow == fast)
+        {
             return true;
         }
     }

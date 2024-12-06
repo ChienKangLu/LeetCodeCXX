@@ -5,9 +5,8 @@
 #include "../common/ListNode.hpp"
 
 // Leetcode 160. Intersection of Two Linked Lists
-class IntersectionOfTwoLinkedLists : public Question 
-{
-public:
+class IntersectionOfTwoLinkedLists : public Question {
+ public:
   virtual ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) = 0;
 };
 

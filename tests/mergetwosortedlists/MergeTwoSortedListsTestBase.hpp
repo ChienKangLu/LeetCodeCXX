@@ -1,14 +1,14 @@
+#include <iterator>
+#include <string>
+
+#include "../utils/ListNodeUtils.cpp"
 #include "gtest/gtest-printers.h"
 #include "gtest/gtest.h"
 #include "questions/mergetwosortedlists/Solution.hpp"
-#include <iterator>
-#include <string>
-#include "../utils/ListNodeUtils.cpp"
 
 template <typename T>
-class MergeTwoSortedListsTestBase : public ::testing::Test 
-{
-protected:
+class MergeTwoSortedListsTestBase : public ::testing::Test {
+ protected:
   void SetUp() override {}
 
   void TearDown() override {}
@@ -20,8 +20,7 @@ protected:
 
 TYPED_TEST_SUITE_P(MergeTwoSortedListsTestBase);
 
-TYPED_TEST_P(MergeTwoSortedListsTestBase, test1)
-{
+TYPED_TEST_P(MergeTwoSortedListsTestBase, test1) {
   // GIVEN
   this->l1 = createList({});
   this->l2 = createList({});
@@ -34,10 +33,9 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test1)
   EXPECT_STREQ("[]", resultString.c_str());
 }
 
-TYPED_TEST_P(MergeTwoSortedListsTestBase, test2)
-{
+TYPED_TEST_P(MergeTwoSortedListsTestBase, test2) {
   // GIVEN
-  this->l1 = createList({ 1, 2, 3, 4 });
+  this->l1 = createList({1, 2, 3, 4});
   this->l2 = createList({});
 
   // WHEN
@@ -48,11 +46,10 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test2)
   EXPECT_STREQ("[1 2 3 4]", resultString.c_str());
 }
 
-TYPED_TEST_P(MergeTwoSortedListsTestBase, test3)
-{
+TYPED_TEST_P(MergeTwoSortedListsTestBase, test3) {
   // GIVEN
   this->l1 = createList({});
-  this->l2 = createList({ 1, 2, 3, 4 });
+  this->l2 = createList({1, 2, 3, 4});
 
   // WHEN
   ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
@@ -62,11 +59,10 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test3)
   EXPECT_STREQ("[1 2 3 4]", resultString.c_str());
 }
 
-TYPED_TEST_P(MergeTwoSortedListsTestBase, test4)
-{
+TYPED_TEST_P(MergeTwoSortedListsTestBase, test4) {
   // GIVEN
-  this->l1 = createList({ 2, 6, 7, 9 });
-  this->l2 = createList({ 1 });
+  this->l1 = createList({2, 6, 7, 9});
+  this->l2 = createList({1});
 
   // WHEN
   ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
@@ -76,11 +72,10 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test4)
   EXPECT_STREQ("[1 2 6 7 9]", resultString.c_str());
 }
 
-TYPED_TEST_P(MergeTwoSortedListsTestBase, test5)
-{
+TYPED_TEST_P(MergeTwoSortedListsTestBase, test5) {
   // GIVEN
-  this->l1 = createList({ 2, 6, 7, 9 });
-  this->l2 = createList({ 1, 1 });
+  this->l1 = createList({2, 6, 7, 9});
+  this->l2 = createList({1, 1});
 
   // WHEN
   ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
@@ -90,11 +85,10 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test5)
   EXPECT_STREQ("[1 1 2 6 7 9]", resultString.c_str());
 }
 
-TYPED_TEST_P(MergeTwoSortedListsTestBase, test6)
-{
+TYPED_TEST_P(MergeTwoSortedListsTestBase, test6) {
   // GIVEN
-  this->l1 = createList({ 2, 6, 7, 9 });
-  this->l2 = createList({ 10});
+  this->l1 = createList({2, 6, 7, 9});
+  this->l2 = createList({10});
 
   // WHEN
   ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
@@ -104,11 +98,10 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test6)
   EXPECT_STREQ("[2 6 7 9 10]", resultString.c_str());
 }
 
-TYPED_TEST_P(MergeTwoSortedListsTestBase, test7)
-{
+TYPED_TEST_P(MergeTwoSortedListsTestBase, test7) {
   // GIVEN
-  this->l1 = createList({ 2, 6, 7, 9 });
-  this->l2 = createList({ 10, 10 });
+  this->l1 = createList({2, 6, 7, 9});
+  this->l2 = createList({10, 10});
 
   // WHEN
   ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
@@ -118,11 +111,10 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test7)
   EXPECT_STREQ("[2 6 7 9 10 10]", resultString.c_str());
 }
 
-TYPED_TEST_P(MergeTwoSortedListsTestBase, test8)
-{
+TYPED_TEST_P(MergeTwoSortedListsTestBase, test8) {
   // GIVEN
-  this->l1 = createList({ 1, 2, 3, 4, 5 });
-  this->l2 = createList({ 6, 7});
+  this->l1 = createList({1, 2, 3, 4, 5});
+  this->l2 = createList({6, 7});
 
   // WHEN
   ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
@@ -132,11 +124,10 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test8)
   EXPECT_STREQ("[1 2 3 4 5 6 7]", resultString.c_str());
 }
 
-TYPED_TEST_P(MergeTwoSortedListsTestBase, test9)
-{
+TYPED_TEST_P(MergeTwoSortedListsTestBase, test9) {
   // GIVEN
-  this->l1 = createList({ 2, 6, 7, 9 });
-  this->l2 = createList({ 1, 3, 6, 7, 9});
+  this->l1 = createList({2, 6, 7, 9});
+  this->l2 = createList({1, 3, 6, 7, 9});
 
   // WHEN
   ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
@@ -146,11 +137,10 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test9)
   EXPECT_STREQ("[1 2 3 6 6 7 7 9 9]", resultString.c_str());
 }
 
-TYPED_TEST_P(MergeTwoSortedListsTestBase, test10)
-{
+TYPED_TEST_P(MergeTwoSortedListsTestBase, test10) {
   // GIVEN
-  this->l1 = createList({ 2, 6, 7, 9 });
-  this->l2 = createList({ 1, 10});
+  this->l1 = createList({2, 6, 7, 9});
+  this->l2 = createList({1, 10});
 
   // WHEN
   ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
@@ -160,11 +150,10 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test10)
   EXPECT_STREQ("[1 2 6 7 9 10]", resultString.c_str());
 }
 
-TYPED_TEST_P(MergeTwoSortedListsTestBase, test11)
-{
+TYPED_TEST_P(MergeTwoSortedListsTestBase, test11) {
   // GIVEN
-  this->l1 = createList({ 1, 2, 4 });
-  this->l2 = createList({ 1, 3, 4 });
+  this->l1 = createList({1, 2, 4});
+  this->l2 = createList({1, 3, 4});
 
   // WHEN
   ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);
@@ -174,11 +163,10 @@ TYPED_TEST_P(MergeTwoSortedListsTestBase, test11)
   EXPECT_STREQ("[1 1 2 3 4 4]", resultString.c_str());
 }
 
-TYPED_TEST_P(MergeTwoSortedListsTestBase, test12)
-{
+TYPED_TEST_P(MergeTwoSortedListsTestBase, test12) {
   // GIVEN
   this->l1 = createList({});
-  this->l2 = createList({ 0 });
+  this->l2 = createList({0});
 
   // WHEN
   ListNode *result = this->solution.mergeTwoLists(this->l1, this->l2);

@@ -5,15 +5,13 @@
 
 using namespace std;
 
-class Solution1 : SortColors
-{
-public:
+class Solution1 : SortColors {
+ public:
   void sortColors(vector<int>& nums) override;
 };
 
-class Solution2 : SortColors
-{
-public:
+class Solution2 : SortColors {
+ public:
   void sortColors(vector<int>& nums) override;
 };
 

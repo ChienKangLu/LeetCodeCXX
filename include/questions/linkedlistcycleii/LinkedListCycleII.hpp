@@ -5,9 +5,8 @@
 #include "../common/ListNode.hpp"
 
 // Leetcode 142. Linked List Cycle II
-class LinkedListCycleII : public Question 
-{
-public:
+class LinkedListCycleII : public Question {
+ public:
   virtual ListNode *detectCycle(ListNode *head) = 0;
 };
 

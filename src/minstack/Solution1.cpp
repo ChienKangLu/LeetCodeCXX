@@ -3,27 +3,34 @@
 
 #include "questions/minstack/Solution.hpp"
 
-void Solution1::minstackPush(int val) {
+void Solution1::minstackPush(int val)
+{
     // maintain sorted data
     minQueue.push(val);
 
     // increase data count
-    if (countMap.find(val) != countMap.end()) {
+    if (countMap.find(val) != countMap.end())
+    {
         countMap[val] += 1;
-    } else {
+    }
+    else
+    {
         countMap[val] = 1;
     }
 
     // maintain order
     data.push_back(val);
 }
- 
-void Solution1::minstackPop() {
+
+void Solution1::minstackPop()
+{
     // decrease data count
     auto top = minstackTop();
-    if (countMap.find(top) != countMap.end()) {
+    if (countMap.find(top) != countMap.end())
+    {
         countMap[top] -= 1;
-        if (countMap[top] == 0) {
+        if (countMap[top] == 0)
+        {
             countMap.erase(top);
         }
     }
@@ -32,13 +39,16 @@ void Solution1::minstackPop() {
     data.pop_back();
 }
 
-int Solution1::minstackTop() {
+int Solution1::minstackTop()
+{
     return data.back();
 }
 
-int Solution1::minstackGetMin() {
+int Solution1::minstackGetMin()
+{
     // check the data in minQueue is still valid
-    while (countMap.find(minQueue.top()) == countMap.end()) {
+    while (countMap.find(minQueue.top()) == countMap.end())
+    {
         minQueue.pop();
     }
 

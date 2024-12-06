@@ -5,9 +5,8 @@
 #include "../common/ListNode.hpp"
 
 // Leetcode 328. Odd Even Linked List
-class OddEvenLinkedList : public Question 
-{
-public:
+class OddEvenLinkedList : public Question {
+ public:
   virtual ListNode* oddEvenList(ListNode* head) = 0;
 };
 

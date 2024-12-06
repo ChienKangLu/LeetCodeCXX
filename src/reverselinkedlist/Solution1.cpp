@@ -3,15 +3,18 @@
 
 #include "questions/reverselinkedlist/Solution.hpp"
 
-ListNode* Solution1::reverseList(ListNode* head) {
-    if (head == nullptr) {
+ListNode *Solution1::reverseList(ListNode *head)
+{
+    if (head == nullptr)
+    {
         return nullptr;
     }
-    
-    ListNode* last = nullptr;
-    ListNode* next = nullptr;
-    ListNode* cur = head;
-    while (cur != nullptr) {
+
+    ListNode *last = nullptr;
+    ListNode *next = nullptr;
+    ListNode *cur = head;
+    while (cur != nullptr)
+    {
         next = cur->next;
         cur->next = last;
         last = cur;

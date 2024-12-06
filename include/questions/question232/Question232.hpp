@@ -4,17 +4,15 @@
 #include "../Question.hpp"
 
 // Leetcode 232. Implement Queue using Stacks
-namespace Question232
-{
-class Question232 : public Question 
-{
-public:
+namespace Question232 {
+class Question232 : public Question {
+ public:
   virtual void push(int x) = 0;
-    
+
   virtual int pop() = 0;
-    
+
   virtual int peek() = 0;
-    
+
   virtual bool empty() = 0;
 };
 }  // namespace Question232

@@ -3,17 +3,14 @@
 
 #include "LinkedListCycleII.hpp"
 
-class Solution1 : LinkedListCycleII
-{
-public:
+class Solution1 : LinkedListCycleII {
+ public:
   ListNode *detectCycle(ListNode *head) override;
 };
 
-class Solution2 : LinkedListCycleII
-{
-public:
+class Solution2 : LinkedListCycleII {
+ public:
   ListNode *detectCycle(ListNode *head) override;
 };
-
 
 #endif

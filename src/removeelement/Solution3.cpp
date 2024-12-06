@@ -5,13 +5,15 @@
 
 int Solution3::removeElement(std::vector<int> &nums, int val)
 {
-  int k = 0;
-  for (int& num : nums) {
-    if (num != val) {
-      nums[k++] = num;
+    int k = 0;
+    for (int &num : nums)
+    {
+        if (num != val)
+        {
+            nums[k++] = num;
+        }
     }
-  }
-  return k;
+    return k;
 }
 
 #endif

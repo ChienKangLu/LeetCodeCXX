@@ -3,8 +3,10 @@
 
 #include "questions/spiralmatrix/Solution.hpp"
 
-vector<int> Solution1::spiralOrder(vector<vector<int>>& matrix) {
-    if (matrix.empty()) {
+vector<int> Solution1::spiralOrder(vector<vector<int>> &matrix)
+{
+    if (matrix.empty())
+    {
         return {};
     }
 
@@ -22,24 +24,36 @@ vector<int> Solution1::spiralOrder(vector<vector<int>>& matrix) {
 
     vector<int> result;
 
-    while (result.size() != total - 1) {
-        if (direction == 0) {
-            while (x < right) {
+    while (result.size() != total - 1)
+    {
+        if (direction == 0)
+        {
+            while (x < right)
+            {
                 result.push_back(matrix[y][x++]);
             }
             top++;
-        } else if (direction == 1) {
-            while (y < bottom) {
+        }
+        else if (direction == 1)
+        {
+            while (y < bottom)
+            {
                 result.push_back(matrix[y++][x]);
             }
             right--;
-        } else if (direction == 2) {
-            while (x > left) {
+        }
+        else if (direction == 2)
+        {
+            while (x > left)
+            {
                 result.push_back(matrix[y][x--]);
             }
             bottom--;
-        } else if (direction == 3) {
-            while (y > top) {
+        }
+        else if (direction == 3)
+        {
+            while (y > top)
+            {
                 result.push_back(matrix[y--][x]);
             }
             left++;

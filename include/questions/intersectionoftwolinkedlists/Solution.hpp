@@ -3,9 +3,8 @@
 
 #include "IntersectionOfTwoLinkedLists.hpp"
 
-class Solution1 : IntersectionOfTwoLinkedLists
-{
-public:
+class Solution1 : IntersectionOfTwoLinkedLists {
+ public:
   ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) override;
 };
 

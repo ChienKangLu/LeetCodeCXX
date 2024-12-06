@@ -3,15 +3,13 @@
 
 #include "ReverseLinkedList.hpp"
 
-class Solution1 : ReverseLinkedList
-{
-public:
+class Solution1 : ReverseLinkedList {
+ public:
   ListNode* reverseList(ListNode* head) override;
 };
 
-class Solution2 : ReverseLinkedList
-{
-public:
+class Solution2 : ReverseLinkedList {
+ public:
   ListNode* reverseList(ListNode* head) override;
 };
 

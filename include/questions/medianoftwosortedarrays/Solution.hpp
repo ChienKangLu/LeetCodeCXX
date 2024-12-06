@@ -3,10 +3,10 @@
 
 #include "MedianOfTwoSortedArrays.hpp"
 
-class Solution1 : MedianOfTwoSortedArrays
-{
-public:
-  double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) override;
+class Solution1 : MedianOfTwoSortedArrays {
+ public:
+  double findMedianSortedArrays(vector<int>& nums1,
+                                vector<int>& nums2) override;
 };
 
 #endif

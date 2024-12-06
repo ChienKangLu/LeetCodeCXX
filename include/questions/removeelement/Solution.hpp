@@ -3,21 +3,18 @@
 
 #include "RemoveElement.hpp"
 
-class Solution1 : RemoveElement
-{
-public:
+class Solution1 : RemoveElement {
+ public:
   int removeElement(std::vector<int> &nums, int val) override;
 };
 
-class Solution2 : RemoveElement
-{
-public:
+class Solution2 : RemoveElement {
+ public:
   int removeElement(std::vector<int> &nums, int val) override;
 };
 
-class Solution3 : RemoveElement
-{
-public:
+class Solution3 : RemoveElement {
+ public:
   int removeElement(std::vector<int> &nums, int val) override;
 };
 

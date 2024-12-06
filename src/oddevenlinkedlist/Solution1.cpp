@@ -4,22 +4,28 @@
 #include "questions/oddevenlinkedlist/Solution.hpp"
 #include <iostream>
 
-ListNode* Solution1::oddEvenList(ListNode* head) {
-    if (head == nullptr) {
+ListNode *Solution1::oddEvenList(ListNode *head)
+{
+    if (head == nullptr)
+    {
         return nullptr;
     }
 
     ListNode evenDummyHead;
-    ListNode* evenP = &evenDummyHead;
+    ListNode *evenP = &evenDummyHead;
     ListNode oddDummyHead;
-    ListNode* oddP = &oddDummyHead;
-    ListNode* p = head;
+    ListNode *oddP = &oddDummyHead;
+    ListNode *p = head;
     int i = 0;
-    while (p != nullptr) {
-        if (i % 2 == 0) { // even
+    while (p != nullptr)
+    {
+        if (i % 2 == 0)
+        { // even
             evenP->next = p;
             evenP = evenP->next;
-        } else { // odd
+        }
+        else
+        { // odd
             oddP->next = p;
             oddP = oddP->next;
         }

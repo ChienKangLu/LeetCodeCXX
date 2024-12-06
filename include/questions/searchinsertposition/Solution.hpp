@@ -3,15 +3,13 @@
 
 #include "SearchInsertPosition.hpp"
 
-class Solution1 : SearchInsertPosition
-{
-public:
+class Solution1 : SearchInsertPosition {
+ public:
   int searchInsert(std::vector<int>& nums, int target) override;
 };
 
-class Solution2 : SearchInsertPosition
-{
-public:
+class Solution2 : SearchInsertPosition {
+ public:
   int searchInsert(std::vector<int>& nums, int target) override;
 };
 
