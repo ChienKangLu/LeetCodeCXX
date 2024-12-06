@@ -5,7 +5,7 @@
 | 4    | Median of Two Sorted Arrays                        | Hard       | Binary search |                   |
 | 20   | Valid Parentheses                                  | Easy       |               |                   |
 | 21   | Merge Two Sorted Lists                             | Easy       |               |                   |
-| 26   | Remove Duplicates from Sorted Array                | Easy       |               |                   |
+| 26   | Remove Duplicates from Sorted Array                | Easy       | Array         | Top-Interview-150 |
 | 27   | Remove Element                                     | Easy       | Array, Sort   | Top-Interview-150 |
 | 28   | Find the Index of the First Occurrence in a String | Easy       |               |                   |
 | 35   | Search Insert Position                             | Easy       |               |                   |
