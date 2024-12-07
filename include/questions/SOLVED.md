@@ -21,6 +21,7 @@
 | 142  | Linked List Cycle II                               | Medium     | Linked List   |                   |
 | 150  | Evaluate Reverse Polish Notation                   | Medium     | Stack         |                   |
 | 160  | Intersection of Two Linked Lists                   | Medium     | Linked List   |                   |
+| 169  | Majority Element                                   | Easy       | Array         | Top-Interview-150 |
 | 179  | Largest Number                                     | Medium     |               |                   |
 | 206  | Reverse Linked List                                | Easy       | Linked List   |                   |
 | 215  | Kth Largest Element in an Array                    | Medium     | Sort          |                   |
