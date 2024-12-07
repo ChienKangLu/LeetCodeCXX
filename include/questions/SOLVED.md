@@ -23,6 +23,7 @@
 | 160  | Intersection of Two Linked Lists                   | Medium     | Linked List   |                   |
 | 169  | Majority Element                                   | Easy       | Array         | Top-Interview-150 |
 | 179  | Largest Number                                     | Medium     |               |                   |
+| 189  | Rotate Array                                       | Medium     | Array         | Top-Interview-150 |
 | 206  | Reverse Linked List                                | Easy       | Linked List   |                   |
 | 215  | Kth Largest Element in an Array                    | Medium     | Sort          |                   |
 | 224  | Basic Calculator                                   | Hard       | Stack         |                   |
