@@ -12,8 +12,9 @@
 | 54   | Spiral Matrix                                      | Medium     | Queue         |                   |
 | 56   | Merge Intervals                                    | Medium     | Sort          |                   |
 | 75   | Sort Colors                                        | Medium     | Sort          |                   |
-| 92   | Reverse Linked List II                             | Medium     | Linked List   |                   |
+| 80   | Remove Duplicates from Sorted Array II             | Medium     | Array         | Top-Interview-150 |
 | 88   | Merge Sorted Array                                 | Easy       | Array         | Top-Interview-150 |
+| 92   | Reverse Linked List II                             | Medium     | Linked List   |                   |
 | 155  | Min Stack                                          | Medium     | Stack         |                   |
 | 148  | Sort List                                          | Medium     | Sort          |                   |
 | 141  | Linked List Cycle                                  | Medium     | Linked List   |                   |
