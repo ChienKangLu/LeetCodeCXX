@@ -15,11 +15,13 @@
 | 80   | Remove Duplicates from Sorted Array II             | Medium     | Array         | Top-Interview-150 |
 | 88   | Merge Sorted Array                                 | Easy       | Array         | Top-Interview-150 |
 | 92   | Reverse Linked List II                             | Medium     | Linked List   |                   |
-| 155  | Min Stack                                          | Medium     | Stack         |                   |
+| 121  | Best Time to Buy and Sell Stock                    | Easy       | Array         | Top-Interview-150 |
 | 148  | Sort List                                          | Medium     | Sort          |                   |
 | 141  | Linked List Cycle                                  | Medium     | Linked List   |                   |
 | 142  | Linked List Cycle II                               | Medium     | Linked List   |                   |
+| 148  | Sort List                                          | Medium     | Sort          |                   |
 | 150  | Evaluate Reverse Polish Notation                   | Medium     | Stack         |                   |
+| 155  | Min Stack                                          | Medium     | Stack         |                   |
 | 160  | Intersection of Two Linked Lists                   | Medium     | Linked List   |                   |
 | 169  | Majority Element                                   | Easy       | Array         | Top-Interview-150 |
 | 179  | Largest Number                                     | Medium     |               |                   |

@@ -71,6 +71,8 @@ set(INTERFACE_FILES
   "${PROJECT_SOURCE_DIR}/include/questions/question169/Solution.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/question189/Question189.hpp"
   "${PROJECT_SOURCE_DIR}/include/questions/question189/Solution.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/question121/Question121.hpp"
+  "${PROJECT_SOURCE_DIR}/include/questions/question121/Solution.hpp"
 )
 
 set(IMPLEMENTATION_SOURCES
@@ -124,6 +126,7 @@ set(IMPLEMENTATION_SOURCES
   "question169/Solution2.cpp"
   "question189/Solution1.cpp"
   "question189/Solution2.cpp"
+  "question121/Solution1.cpp"
 )
 
 add_library(SolutionLib
