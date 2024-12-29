@@ -10,6 +10,7 @@
 | 28   | Find the Index of the First Occurrence in a String | Easy       |               |                   |
 | 35   | Search Insert Position                             | Easy       |               |                   |
 | 54   | Spiral Matrix                                      | Medium     | Queue         |                   |
+| 55   | Jump Game                                          | Medium     | Array         | Top-Interview-150 |
 | 56   | Merge Intervals                                    | Medium     | Sort          |                   |
 | 75   | Sort Colors                                        | Medium     | Sort          |                   |
 | 80   | Remove Duplicates from Sorted Array II             | Medium     | Array         | Top-Interview-150 |
