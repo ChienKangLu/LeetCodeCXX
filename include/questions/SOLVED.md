@@ -9,6 +9,7 @@
 | 27   | Remove Element                                     | Easy       | Array, Sort   | Top-Interview-150 |
 | 28   | Find the Index of the First Occurrence in a String | Easy       |               |                   |
 | 35   | Search Insert Position                             | Easy       |               |                   |
+| 45   | Jump Game II                                       | Medium     | Array         | Top-Interview-150 |
 | 54   | Spiral Matrix                                      | Medium     | Queue         |                   |
 | 55   | Jump Game                                          | Medium     | Array         | Top-Interview-150 |
 | 56   | Merge Intervals                                    | Medium     | Sort          |                   |
