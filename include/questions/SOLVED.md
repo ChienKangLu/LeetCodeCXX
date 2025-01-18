@@ -39,5 +39,6 @@
 | 281  | Zigzag Iterator                                    | Medium     | Queue         |                   |
 | 328  | Odd Even Linked List                               | Medium     | Linked List   |                   |
 | 346  | Moving Average from Data Stream                    | Easy       | Queue         |                   |
+| 380  | Insert Delete GetRandom O(1)                       | Medium     | Array         | Top-Interview-150 |
 | 876  | Middle of the Linked List                          | Easy       | Linked List   |                   |
 | 1429 | First Unique Number                                | Medium     | Queue         |                   |
