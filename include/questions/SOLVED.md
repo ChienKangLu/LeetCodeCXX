@@ -35,6 +35,7 @@
 | 225  | Implement Stack using Queues                       | Easy       | Queue         |                   |
 | 227  | Basic Calculator II                                | Medium     | Stack         |                   |
 | 232  | Implement Queue using Stacks                       | Easy       | Stack         |                   |
+| 274  | H-Index                                            | Medium     | Array         | Top-Interview-150 |
 | 281  | Zigzag Iterator                                    | Medium     | Queue         |                   |
 | 328  | Odd Even Linked List                               | Medium     | Linked List   |                   |
 | 346  | Moving Average from Data Stream                    | Easy       | Queue         |                   |
