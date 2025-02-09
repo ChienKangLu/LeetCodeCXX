@@ -2,8 +2,9 @@
 
 | #    | Title                                              | Difficulty | Cat.          | Tag               |
 |------|----------------------------------------------------|------------|---------------|-------------------|
-| 3    | Roman to Integer                                   | Easy       | Array         | Top-Interview-150 |
 | 4    | Median of Two Sorted Arrays                        | Hard       | Binary search |                   |
+| 12   | Integer to Roman                                   | Easy       | Array         | Top-Interview-150 |
+| 13   | Roman to Integer                                   | Easy       | Array         | Top-Interview-150 |
 | 20   | Valid Parentheses                                  | Easy       |               |                   |
 | 21   | Merge Two Sorted Lists                             | Easy       |               |                   |
 | 26   | Remove Duplicates from Sorted Array                | Easy       | Array         | Top-Interview-150 |
