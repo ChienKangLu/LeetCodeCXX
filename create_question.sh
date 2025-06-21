@@ -110,11 +110,9 @@ get_question_header_file_template() {
 
 #include \"../Question.hpp\"
 
-namespace ${no_sapce_question_name}
-{
-class ${no_sapce_question_name} : public Question 
-{
-public:
+namespace ${no_sapce_question_name} {
+class ${no_sapce_question_name} : public Question {
+ public:
   /* Please declare pure virtual function according to question */
 };
 }  // namespace ${no_sapce_question_name}
@@ -145,11 +143,9 @@ get_solution_header_file_template() {
 
 #include \"${question_header_file_name}\"
 
-namespace ${no_sapce_question_name}
-{
-class Solution1 : ${no_sapce_question_name}
-{
-public:
+namespace ${no_sapce_question_name} {
+class Solution1 : ${no_sapce_question_name} {
+ public:
   /* Please redefine/override pure virtual function from ${no_sapce_question_name} */
 };
 }  // namespace ${no_sapce_question_name}
@@ -193,8 +189,7 @@ get_solution_source_file_template() {
 
 #include \"questions/${lower_case_no_space_question_name}/Solution.hpp\"
 
-namespace ${no_sapce_question_name}
-{
+namespace ${no_sapce_question_name} {
 /* Please implement solution according to \"questions/${lower_case_no_space_question_name}/Solution.hpp\" */
 }  // namespace ${no_sapce_question_name}
 
@@ -236,9 +231,8 @@ get_test_base_source_file_template() {
 #include \"questions/${lower_case_no_space_question_name}/Solution.hpp\"
 
 template <typename T>
-class ${no_sapce_question_name}TestBase : public ::testing::Test 
-{
-protected:
+class ${no_sapce_question_name}TestBase : public ::testing::Test {
+ protected:
   void SetUp() override {}
 
   void TearDown() override {}
@@ -248,13 +242,12 @@ protected:
 
 TYPED_TEST_SUITE_P(${no_sapce_question_name}TestBase);
 
-TYPED_TEST_P(${no_sapce_question_name}TestBase, test1)
-{
-    // GIVEN
-    
-    // WHEN
+TYPED_TEST_P(${no_sapce_question_name}TestBase, test1) {
+  // GIVEN
 
-    // THEN
+  // WHEN
+
+  // THEN
 }\
 "
     echo "${template}"
@@ -281,22 +274,21 @@ get_test_source_file_template() {
 typedef testing::Types<${no_sapce_question_name}::Solution1> TestTypes;
 
 class TypeNames {
-public:
+ public:
   template <typename T>
   static std::string GetName(int) {
-    if (std::is_same<T, ${no_sapce_question_name}::Solution1>())
-    {
+    if (std::is_same<T, ${no_sapce_question_name}::Solution1>()) {
       return \"Solution1\";
     } else {
-      return "";
+      return \"UnknownType\";
     }
   }
 };
 
-REGISTER_TYPED_TEST_SUITE_P(${no_sapce_question_name}TestBase, 
-                            test1);
+REGISTER_TYPED_TEST_SUITE_P(${no_sapce_question_name}TestBase, test1);
 
-INSTANTIATE_TYPED_TEST_SUITE_P(${no_sapce_question_name}Test, ${no_sapce_question_name}TestBase, TestTypes, TypeNames);\
+INSTANTIATE_TYPED_TEST_SUITE_P(${no_sapce_question_name}Test, ${no_sapce_question_name}TestBase, TestTypes, 
+                               TypeNames);\
 "
     echo "${template}"
 }
