@@ -1,8 +1,9 @@
 #ifndef QUESTION122_SOLUTION1_H_
 #define QUESTION122_SOLUTION1_H_
 
-#include "questions/question122/Solution.hpp"
 #include <climits>
+
+#include "questions/question122/Solution.hpp"
 
 namespace Question122 {
 

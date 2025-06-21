@@ -1,13 +1,14 @@
 #ifndef LINKED_LIST_CYCLE_II_SOLUTION1_H_
 #define LINKED_LIST_CYCLE_II_SOLUTION1_H_
 
-#include "questions/linkedlistcycleii/Solution.hpp"
 #include <unordered_set>
+
+#include "questions/linkedlistcycleii/Solution.hpp"
 
 using namespace std;
 /**
- * While find the first intersection (Z), then the length from intersction (Z) to
- * cycle node (Y) is same the length from start (X) to cycle node (Y).
+ * While find the first intersection (Z), then the length from intersction (Z)
+ * to cycle node (Y) is same the length from start (X) to cycle node (Y).
  *
  * Prove:
  *
@@ -25,30 +26,26 @@ using namespace std;
  * a + b + c + b = 2 (a + b)
  * => a = c
  */
-ListNode *Solution2::detectCycle(ListNode *head)
-{
-    ListNode *slow = head;
-    ListNode *fast = head;
+ListNode *Solution2::detectCycle(ListNode *head) {
+  ListNode *slow = head;
+  ListNode *fast = head;
 
-    // find intersection
-    while (fast != nullptr && fast->next != nullptr)
-    {
+  // find intersection
+  while (fast != nullptr && fast->next != nullptr) {
+    slow = slow->next;
+    fast = fast->next->next;
+    if (slow == fast) {
+      // find cycle
+      ListNode *start = head;
+      while (start != slow) {
+        start = start->next;
         slow = slow->next;
-        fast = fast->next->next;
-        if (slow == fast)
-        {
-            // find cycle
-            ListNode *start = head;
-            while (start != slow)
-            {
-                start = start->next;
-                slow = slow->next;
-            }
-            return start;
-        }
+      }
+      return start;
     }
+  }
 
-    return nullptr;
+  return nullptr;
 }
 
 #endif

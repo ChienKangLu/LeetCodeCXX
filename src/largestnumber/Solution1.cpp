@@ -1,31 +1,28 @@
 #ifndef LARGEST_NUMBER_SOLUTION1_H_
 #define LARGEST_NUMBER_SOLUTION1_H_
 
-#include "questions/largestnumber/Solution.hpp"
 #include <algorithm>
 
-string Solution1::largestNumber(vector<int> &nums)
-{
-    vector<string> s;
-    for (const auto &num : nums)
-    {
-        s.push_back(to_string(num));
-    }
+#include "questions/largestnumber/Solution.hpp"
 
-    // Sort numbers by lexical order
-    sort(s.begin(), s.end(), [](string &a, string &b) { return a + b > b + a; });
+string Solution1::largestNumber(vector<int> &nums) {
+  vector<string> s;
+  for (const auto &num : nums) {
+    s.push_back(to_string(num));
+  }
 
-    if (s[0] == "0")
-    {
-        return "0";
-    }
+  // Sort numbers by lexical order
+  sort(s.begin(), s.end(), [](string &a, string &b) { return a + b > b + a; });
 
-    string ans;
-    for (const auto &it : s)
-    {
-        ans += it;
-    }
-    return ans;
+  if (s[0] == "0") {
+    return "0";
+  }
+
+  string ans;
+  for (const auto &it : s) {
+    ans += it;
+  }
+  return ans;
 }
 
 #endif

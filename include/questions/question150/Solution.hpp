@@ -1,10 +1,10 @@
 #ifndef QUESTIONS_QUESTION150_SOLUTION_H_
 #define QUESTIONS_QUESTION150_SOLUTION_H_
 
+#include <functional>
 #include <stack>
 
 #include "Question150.hpp"
-#include <functional>
 
 namespace Question150 {
 class Solution1 : Question150 {

@@ -17,7 +17,7 @@ void Solution1::merge(std::vector<int> &nums1, int m, std::vector<int> &nums2,
     } else if (r2 >= 0) {
       nums1[w] = nums2[r2--];
     }
-    }
+  }
 }
 }  // namespace Question88
 
