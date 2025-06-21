@@ -2,7 +2,6 @@
 
 | #    | Title                                              | Difficulty | Cat.          | Tag               |
 |------|----------------------------------------------------|------------|---------------|-------------------|
-| 4    | Median of Two Sorted Arrays                        | Hard       | Binary search |                   |
 | 12   | Integer to Roman                                   | Easy       | Array         | Top-Interview-150 |
 | 13   | Roman to Integer                                   | Easy       | Array         | Top-Interview-150 |
 | 20   | Valid Parentheses                                  | Easy       |               |                   |
@@ -23,27 +22,19 @@
 | 121  | Best Time to Buy and Sell Stock II                 | Medium     | Array         | Top-Interview-150 |
 | 134  | Gas Station                                        | Medium     | Array         | Top-Interview-150 |
 | 135  | Candy                                              | Hard       | Array         | Top-Interview-150 |
-| 148  | Sort List                                          | Medium     | Sort          |                   |
 | 141  | Linked List Cycle                                  | Medium     | Linked List   |                   |
 | 142  | Linked List Cycle II                               | Medium     | Linked List   |                   |
-| 148  | Sort List                                          | Medium     | Sort          |                   |
 | 150  | Evaluate Reverse Polish Notation                   | Medium     | Stack         |                   |
-| 155  | Min Stack                                          | Medium     | Stack         |                   |
 | 160  | Intersection of Two Linked Lists                   | Medium     | Linked List   |                   |
 | 169  | Majority Element                                   | Easy       | Array         | Top-Interview-150 |
 | 179  | Largest Number                                     | Medium     |               |                   |
 | 189  | Rotate Array                                       | Medium     | Array         | Top-Interview-150 |
-| 206  | Reverse Linked List                                | Easy       | Linked List   |                   |
 | 215  | Kth Largest Element in an Array                    | Medium     | Sort          |                   |
 | 224  | Basic Calculator                                   | Hard       | Stack         |                   |
-| 225  | Implement Stack using Queues                       | Easy       | Queue         |                   |
 | 227  | Basic Calculator II                                | Medium     | Stack         |                   |
 | 232  | Implement Queue using Stacks                       | Easy       | Stack         |                   |
 | 238  | Product of Array Except Self                       | Medium     | Array         | Top-Interview-150 |
 | 274  | H-Index                                            | Medium     | Array         | Top-Interview-150 |
-| 281  | Zigzag Iterator                                    | Medium     | Queue         |                   |
 | 328  | Odd Even Linked List                               | Medium     | Linked List   |                   |
-| 346  | Moving Average from Data Stream                    | Easy       | Queue         |                   |
 | 380  | Insert Delete GetRandom O(1)                       | Medium     | Array         | Top-Interview-150 |
 | 876  | Middle of the Linked List                          | Easy       | Linked List   |                   |
-| 1429 | First Unique Number                                | Medium     | Queue         |                   |

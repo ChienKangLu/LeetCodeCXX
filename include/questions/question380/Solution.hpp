@@ -19,7 +19,7 @@ class Solution1 : Question380 {
 
  private:
   unordered_map<int, int> map{};
-  vector<int> vector{};
+  std::vector<int> vector{};
 };
 }  // namespace Question380
 

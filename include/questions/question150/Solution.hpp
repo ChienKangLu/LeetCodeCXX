@@ -4,6 +4,7 @@
 #include <stack>
 
 #include "Question150.hpp"
+#include <functional>
 
 namespace Question150 {
 class Solution1 : Question150 {
@@ -11,7 +12,7 @@ class Solution1 : Question150 {
   int evalRPN(vector<string>& tokens) override;
 
  private:
-  void calculate(function<int(int, int)> func);
+  void calculate(std::function<int(int, int)> func);
 
   stack<string> _stack;
 };

@@ -9,6 +9,8 @@ public:
     if (std::is_same<T, Question380::Solution1>())
     {
       return "Solution1";
+    } else {
+      return "";
     }
   }
 };

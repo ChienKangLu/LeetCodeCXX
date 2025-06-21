@@ -2,6 +2,7 @@
 #define KTH_LARGEST_ELEMENT_IN_AN_ARRAY_SOLUTION1_H_
 
 #include "questions/kthlargestelementinanarray/Solution.hpp"
+#include <algorithm>
 
 int Solution1::findKthLargest(vector<int> &nums, int k)
 {

@@ -45,7 +45,7 @@ TYPED_TEST_P(Question88TestBase, test2) {
 
 TYPED_TEST_P(Question88TestBase, test3) {
   // GIVEN
-  std::vector<int> nums1{};
+  std::vector<int> nums1{0};
   int m = 0;
   std::vector<int> nums2{1};
   int n = 1;

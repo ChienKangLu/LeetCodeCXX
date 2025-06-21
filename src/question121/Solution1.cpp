@@ -4,6 +4,7 @@
 #include <algorithm>
 
 #include "questions/question121/Solution.hpp"
+#include <climits>
 
 namespace Question121 {
 int Solution1::maxProfit(vector<int>& prices) {

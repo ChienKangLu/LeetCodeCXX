@@ -27,7 +27,7 @@ int Solution2::calculate(string s)
             // assemble char to number
             currentNumber = currentNumber * 10 + c - '0';
         }
-        if (!isdigit(c) && !iswspace(c) || i == length - 1)
+        if (!isdigit(c) && !isspace(c) || i == length - 1)
         {
             // drop any non digit and white space char
             // handle the 'last' operation once encounter (1) no digit (2) end of string

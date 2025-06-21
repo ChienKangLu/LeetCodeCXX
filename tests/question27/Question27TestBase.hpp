@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "questions/question27/Solution.hpp"
+#include <algorithm>
 
 template <typename T>
 class Question27TestBase : public ::testing::Test {

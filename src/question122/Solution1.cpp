@@ -2,6 +2,7 @@
 #define QUESTION122_SOLUTION1_H_
 
 #include "questions/question122/Solution.hpp"
+#include <climits>
 
 namespace Question122 {
 

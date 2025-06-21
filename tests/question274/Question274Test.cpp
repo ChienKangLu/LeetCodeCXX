@@ -8,6 +8,8 @@ class TypeNames {
   static std::string GetName(int) {
     if (std::is_same<T, Question274::Solution1>()) {
       return "Solution1";
+    } else {
+      return "";
     }
   }
 };

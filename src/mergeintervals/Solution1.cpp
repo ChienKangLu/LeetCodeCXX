@@ -2,6 +2,7 @@
 #define MERGE_INTERVALS_SOLUTION1_H_
 
 #include "questions/mergeintervals/Solution.hpp"
+#include <algorithm>
 
 vector<vector<int>> Solution1::merge(vector<vector<int>> &intervals)
 {

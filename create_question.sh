@@ -287,6 +287,8 @@ public:
     if (std::is_same<T, ${no_sapce_question_name}::Solution1>())
     {
       return \"Solution1\";
+    } else {
+      return "";
     }
   }
 };

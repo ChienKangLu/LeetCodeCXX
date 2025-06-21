@@ -2,6 +2,7 @@
 #define LARGEST_NUMBER_SOLUTION1_H_
 
 #include "questions/largestnumber/Solution.hpp"
+#include <algorithm>
 
 string Solution1::largestNumber(vector<int> &nums)
 {

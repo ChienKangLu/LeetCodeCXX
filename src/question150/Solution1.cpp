@@ -2,6 +2,7 @@
 #define QUESTION150_SOLUTION1_H_
 
 #include "questions/question150/Solution.hpp"
+#include <functional>
 
 namespace Question150
 {
@@ -31,7 +32,7 @@ int Solution1::evalRPN(vector<string> &tokens)
     return stoi(_stack.top());
 }
 
-void Solution1::calculate(function<int(int, int)> func)
+void Solution1::calculate(std::function<int(int, int)> func)
 {
     _stack.pop(); // pop operation
     auto right = _stack.top();
