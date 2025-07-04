@@ -3,9 +3,11 @@ This is a project for solving Leetcode problems with C++ and verifying multiple 
 
 ## Setup enviroments
 
+Add the following scripts in ~/.bashrc to apply leetcode.sh.
 ```
-./setup_env.sh
-./config.sh
+source <path-to-LeetCodeCXX>/LeetCodeCXX/leetcode.sh
+
+leetcode_path="<path-to-LeetCodeCXX>/LeetCodeCXX"
 ```
 
 ## Create question
@@ -13,7 +15,7 @@ This is a project for solving Leetcode problems with C++ and verifying multiple 
 First, create a question by running command below, then the corresponding template of interfaces and implementations will be created and placed to proper folders:
 
 ```
-./create_question.sh "Question123"
+leetcode_question_create 123
 ```
 
 Second, declare pure virtual function according to question in `include/questions/[questionname]/[QuestionName].hpp`, redefine/override that pure virtual function in `include/questions/[question name]/Solution.hpp` and implement the function in `src/[questionname]/Solution1.cpp`. For example:
@@ -49,43 +51,33 @@ Then, you can start to write your own unit tests in `tests/[questionname]/[quest
 ## Build
 
 ```
-./build.sh
+leetcode_build
 ```
 
 ## Clean
 
 ```
-./clean.sh
+leetcode_clean
 ```
 
 ## Test
 
-Notice: Always build before testing
-
-### Build & run test
+### Run test
 
 ```
-./build.sh && ./build/tests/Question123Test
+leetcode_test_run 123
 ```
 
 ### Run all test suites
 
 ```
-./test.sh
-```
-
-### Run single test suite
-
-```
-cd /build
-make test Question123Test
+leetcode_test_all_run
 ```
 
 ### List test cases in single test suite
 
 ```
-cd build/tests
-./Question123Test --gtest_list_tests
+leetcode_test_list 123
 ```
 
 ### Log of test
