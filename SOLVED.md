@@ -10,7 +10,8 @@
 | 21  | Merge Two Sorted Lists                             | Easy       |             |                   |
 | 26  | Remove Duplicates from Sorted Array                | Easy       | Array       | Top-Interview-150 |
 | 27  | Remove Element                                     | Easy       | Array, Sort | Top-Interview-150 |
-| 28  | Find the Index of the First Occurrence in a String | Easy       |             |                   |
+| 28  | Remove Element                                     | Easy       | Arrays      | Top-Interview-150 |
+| 28  | Find the Index of the First Occurrence in a String | Easy       | Arrays      | Top-Interview-150 |
 | 35  | Search Insert Position                             | Easy       |             |                   |
 | 45  | Jump Game II                                       | Medium     | Array       | Top-Interview-150 |
 | 54  | Spiral Matrix                                      | Medium     | Queue       |                   |
