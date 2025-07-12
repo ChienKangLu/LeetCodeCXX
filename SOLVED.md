@@ -31,6 +31,7 @@
 | 150 | Evaluate Reverse Polish Notation                   | Medium     | Stack        |                   |
 | 151 | Reverse Words in a String                          | Medium     | Array        | Top-Interview-150 |
 | 160 | Intersection of Two Linked Lists                   | Medium     | Linked List  |                   |
+| 167 | Two Sum II - Input Array Is Sorted                 | Medium     | Two Pointers | Top-Interview-150 |
 | 169 | Majority Element                                   | Easy       | Array        | Top-Interview-150 |
 | 179 | Largest Number                                     | Medium     |              |                   |
 | 189 | Rotate Array                                       | Medium     | Array        | Top-Interview-150 |
@@ -43,6 +44,4 @@
 | 328 | Odd Even Linked List                               | Medium     | Linked List  |                   |
 | 380 | Insert Delete GetRandom O(1)                       | Medium     | Array        | Top-Interview-150 |
 | 392 | Is Subsequence                                     | Easy       | Two Pointers | Top-Interview-150 |
-
-Leetcode 392. Is Subsequence
 | 876 | Middle of the Linked List                          | Easy       | Linked List  |                   |
