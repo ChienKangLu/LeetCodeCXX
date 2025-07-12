@@ -42,4 +42,7 @@
 | 274 | H-Index                                            | Medium     | Array        | Top-Interview-150 |
 | 328 | Odd Even Linked List                               | Medium     | Linked List  |                   |
 | 380 | Insert Delete GetRandom O(1)                       | Medium     | Array        | Top-Interview-150 |
+| 392 | Is Subsequence                                     | Easy       | Two Pointers | Top-Interview-150 |
+
+Leetcode 392. Is Subsequence
 | 876 | Middle of the Linked List                          | Easy       | Linked List  |                   |
