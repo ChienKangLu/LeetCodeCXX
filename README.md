@@ -10,6 +10,12 @@ source <path-to-LeetCodeCXX>/LeetCodeCXX/leetcode.sh
 leetcode_path="<path-to-LeetCodeCXX>/LeetCodeCXX"
 ```
 
+Setup enviroment by running the following command:
+```
+leetcode_env_setup
+```
+That's all, ready to code! :rocket:
+
 ## Create question
 
 First, create a question by running command below, then the corresponding template of interfaces and implementations will be created and placed to proper folders:
