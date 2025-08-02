@@ -7,6 +7,7 @@
 | 12  | Integer to Roman                                   | Easy       | Array        | Top-Interview-150 |
 | 13  | Roman to Integer                                   | Easy       | Array        | Top-Interview-150 |
 | 14  | Longest Common Prefix                              | Easy       | Array        | Top-Interview-150 |
+| 15  | 3Sum                                               | Medium     | Two Pointers | Top-Interview-150 |
 | 20  | Valid Parentheses                                  | Easy       |              |                   |
 | 21  | Merge Two Sorted Lists                             | Easy       |              |                   |
 | 26  | Remove Duplicates from Sorted Array                | Easy       | Array        | Top-Interview-150 |
