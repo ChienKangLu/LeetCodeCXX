@@ -64,4 +64,5 @@ add_unittest(Question28Test)
 add_unittest(Question125Test)
 add_unittest(Question392Test)
 add_unittest(Question167Test)
+add_unittest(Question11Test)
 
