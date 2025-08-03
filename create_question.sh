@@ -11,9 +11,11 @@
 #   Still have to edit CMakeLists.txt manaully to including created dirs and header/source files.
 
 create() {
-    local input_question="${1}"
-    echo "Input question: ${input_question}"
-    local question_name="$(uppercasing_first_letter_of_words "${input_question}")"
+    local input_number="${1}"
+    echo "Input number: ${input_number}"
+    local input_question_title="${2}"
+    echo "Input question title: ${input_question_title}"
+    local question_name="Question${input_number}"
     echo "Question name: ${question_name}"
     local no_sapce_question_name=${question_name// /}
     echo "Question name (no sapce): ${no_sapce_question_name}"
@@ -59,23 +61,6 @@ action() {
     echo -e "\e[32m=====${1}=====\e[0m"
 }
 
-uppercasing_first_letter_of_words() {
-    local words="${1}"
-    echo "$(echo "${words}" | awk \
-    '
-        {
-            for(i=1; i<=NF; i++){
-                $i=toupper(substr($i,1,1)) substr($i,2)
-            }
-        }
-        
-        {
-            print
-        }
-    '
-    )"
-}
-
 create_question_header_dir() {
     action "Create question header dir (Start)"
     local question_header_dir="${include_questions_dir}/${lower_case_no_space_question_name}"
@@ -110,6 +95,7 @@ get_question_header_file_template() {
 
 #include \"../Question.hpp\"
 
+// Leetcode ${input_number}. ${input_question_title}
 namespace ${no_sapce_question_name} {
 class ${no_sapce_question_name} : public Question {
  public:
@@ -454,4 +440,4 @@ insert_after_line_number() {
     insert_line_number "${file}" "${line_number}" "${insert}"
 }
 
-create "${1}"
+create "${1}" "${2}"

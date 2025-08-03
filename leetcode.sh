@@ -19,8 +19,9 @@ leetcode_question_create() {
     cd ${leetcode_path}
 
     local question_number="$1"
+    local question_title="$2"
 
-    ./create_question.sh "Question${question_number}"
+    ./create_question.sh "${question_number}" "${question_title}"
 }
 
 leetcode_build() {
