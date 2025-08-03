@@ -2,6 +2,7 @@
 
 | #   | Title                                              | Difficulty | Cat.           | Tag               |
 |-----|----------------------------------------------------|------------|----------------|-------------------|
+| 3   | Longest Substring Without Repeating Characters     | Medium     | Sliding Window | Top-Interview-150 |
 | 6   | Zigzag Conversion                                  | Medium     | Array          | Top-Interview-150 |
 | 11  | Container With Most Water                          | Medium     | Two Pointers   | Top-Interview-150 |
 | 12  | Integer to Roman                                   | Easy       | Array          | Top-Interview-150 |
